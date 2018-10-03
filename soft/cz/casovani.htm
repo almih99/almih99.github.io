@@ -1,0 +1,116 @@
+<html>
+  <head>
+    <title>Спряжение глаголов в настоящем времени</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    
+    <link rel="stylesheet" href="main.css" type="text/css" media="all">
+
+    <script language="javascript" src="keyboard.js"></script>
+    <script language="javascript" src="init.js"></script>
+    <script language="javascript" src="helpers.js"></script>
+    <script language="javascript" src="hints.js"></script>
+
+    <script language="javascript" src="verbs.js"></script>
+
+  </head>
+  <body onLoad="init()">
+    <div id="content" class="content">
+    <h1>Чешский язык.<br>Спряжение глаголов в настоящем времени</h1>
+    
+    
+    <!-- Выбор изучаемых глаголов -->
+    <div class='buttons-panel'>
+      <table width='100%' align='center'>
+        <tr>
+          <td><input type='checkbox' onClick='makeWordList()' id='delat' name='delat'></td>
+          <td width="30%"><label for='delat'>Образец děl<b>at</b></label></td>
+          <td><input type='checkbox' onClick='makeWordList()' id='prosit' name='prosit'></td>
+          <td width="30%"><label for='prosit'>Образец pros<b>it</b></label></td>
+          <td><input type='checkbox' onClick='makeWordList()' id='rozumet' name='rozumet'></td>
+          <td width="30%"><label for='rozumet'>Образец rozum<b>ět</b></label></td>
+        </tr>
+        <tr>
+          <td><input type='checkbox' onClick='makeWordList()' id='dekovat' name='dekovat'></td>
+          <td><label for='dekovat'>Образец děk<b>ovat</b></label></td>
+          <td><input type='checkbox' onClick='makeWordList()' id='cist' name='cist'></td>
+          <td><label for='cist'>Образец čís<b>t</b></label></td>
+          <td><input type='checkbox' onClick='makeWordList()' id='tisknout' name='tisknout'></td>
+          <td><label for='tisknout'>Образец tisk<b>nout</b></label></td>
+        </tr>
+        <tr>
+          <td><input type='checkbox' onClick='makeWordList()' id='irregular' name='irregular'></td>
+          <td><label for='irregular'>Неправильные глаголы</label></td>
+          <td><input type='checkbox' onClick='makeWordList()' id='other' name='other'></td>
+          <td colspan='3'><label for='other'>Глаголы, которые спрягаются неожиданно</label></td>
+        </tr>
+      </table>
+    </div>
+    
+    
+    
+    <div id="resaults">
+      <!-- Место для вывода результатов -->
+    </div>
+
+    <div style='text-align:right;'><input type="button" value="X" onclick="document.getElementById('resaults').innerHTML='';"></div>
+
+    <!-- вопрос и поле ввода -->
+    <table align='center' style='margin-top:2em; margin-bottom:2em;'>
+      <tr>
+        <td colspan="6">
+          <div class='question'>Введите глагол <span  class='initial-form' id='nominativ' onclick='copyToEntry();'>глагол</span><br> в форме <span  class='grammar-form' id='person'>лицо</span> лица, <span  class='grammar-form' id='cislo'>число</span> числа </span>
+        </td>
+      </tr>
+      <tr>
+        <td width="50%"></td>
+        <td>
+          <span class='helper-word'>(<span id='prefix'></span>)</span>
+        </td>
+        <td>
+          <input id='entry' class='entry' type='text' onKeyup="if(event.which==13) {checkAnswer();};">
+        </td>
+        <td>
+          <span id='postfix' class='helper-word'></span>
+        </td>
+        <td>
+          <input type="button" value="Проверить" onClick="checkAnswer();">
+        </td>
+        <td width="50%"></td>
+      </tr>
+    </table>
+
+
+
+    <div id='keyboard'><!-- Экранная клавиатура --></div>
+ 
+    
+    
+    <div class="copyright-link"><span class="copyright-link" onclick="toggleEUL();">&copy; 2013 Михайленко Алексей</span></div>
+    <div class='EUL-text' id='EUL'>
+      <h1>The MIT License</h1>
+      <p class='EUL-line'>Copyright &copy; 2013 <a class='copyright-link' href='mailto:almih99@mail.ru'>Михайленко Алексей</a></p>
+      <hr>
+      <p class='EUL-line'>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
+      <p class='EUL-line'>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
+      <p class='EUL-line'>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+      <div class='closebutton'><input type="button" value="Закрыть" onclick="toggleEUL();"></div>
+    </div>
+    
+    
+    
+    <div class='wordList' id='wordList'><!-- Место для вывода списка слов --></div>
+    
+    
+    
+    <div id="displacer" style='position:relative;top:1em;height:1px;'>&nbsp;<!-- смещение внизу, дабы поле сделать --></div>
+    </div>
+    
+    
+    <!-- скрытая кнопка для вывода списка слов -->
+    <div class='hidden-button' onclick='toggleWordlist();'></div>
+    
+    <div id='hint' class='hint'></div>
+    
+    
+  </body>
+</html>

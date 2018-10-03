@@ -1,0 +1,95 @@
+<html>
+<head>
+  <title>Библиотека</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link href="main.css" rel="stylesheet" type="text/css" />
+  <script language="javascript" src="main.js"></script>
+  <script language="javascript" src="verses.js"></script>
+</head>
+<body onload="initialize();">
+
+  <div class="content">
+    <h1>Библиотека</h1>
+    <p>Что находится в библиотеке? Книги, конечно...</p>
+
+    <div class="item">
+      <div class="item-title">
+      Справочник по Tcl/Tk
+      </div>
+      <div class="item-description">
+        Нечто среднее между справочником и конспектом по Tcl/Tk. Пока для версии 8.4, ибо на 8.5 еще сам не перешел. Содержит описание всех (надеюсь) команд Tcl, описание виджетов и прочая прочая прочая. Страниц эдак на 200-250.
+      </div>
+      <div class="item-description">
+        <div>Формат: odt (open document format)</div>
+        <div>Размер: 228 килобайт</div>
+      </div>
+      <div class="item-description">
+        <a href="books/tcl-tk.zip" class="button">Скачать</a>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-title">
+        Сборник анекдотов
+      </div>
+      <div class="item-description">
+        Маленький сборник анекдотов. Команда <br><code>grep "^\\s*$" an-cp1251.txt | wc -l</code> <br>говорит что их 5689, но я ей не верю, так как есть повторы...
+      </div>
+      <div class="item-description">
+        <div>Формат: txt (cp-1251)</div>
+        <div>Размер: 788 килобайт</div>
+      </div>
+      <div class="item-description">
+        <a href="books/an-cp1251.txt.zip" class="button">Скачать</a>
+      </div>
+    </div>
+    
+<!--
+    <div class="item">
+      <div class="item-title">
+        Наименование
+      </div>
+      <div class="item-description">
+        Описание
+      </div>
+      <div class="item-description">
+        <div>Формат: odt (open document format)</div>
+        <div>Размер: 228 килобайт</div>
+      </div>
+      <div class="item-description">
+        <a href="" class="button">Скачать</a>
+      </div>
+    </div>
+-->
+    <!--#include file="flye-panel" -->
+  </div>
+  
+  <!-- Менюшка --> 
+  <div class="menu">
+    <script language="javascript">
+      <!--
+        PageNo=1; // задаем номер страницы, а остальное загружаем через ssi
+      // -->
+    </script>
+    <!--#include file="menu-panel" -->
+  </div>
+
+  <!-- баннер вверху -->
+  <div class="head">
+    <!--#include file="top-panel" -->
+  </div>
+
+  <div class="top-banner"></div>
+
+  <div class="right-field" id="rf">
+    <!--#include file="shorthand-panel" -->
+  </div>
+
+  <!-- Для паучка всякая фигня -->
+
+  <div id="thread" class="cobthread"></div>
+  <div class="cobnet"></div>
+  <div id="cob" class="cob" onmouseover="cc.escape();"></div>
+
+</body>
+</html>

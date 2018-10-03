@@ -1,0 +1,50 @@
+/*
+ * Набор стилей для всего проекта.
+ * Один. Дабы не было разнобоя.
+ */
+
+body {font-family:serif; margin:0; padding:0; background-color:#E9E9E9;}
+h1 {font-size:150%; text-align:center;}
+
+/* панелька с кнопками вверху */
+div.buttons-panel {background-color:#E9E9E9; border-top:solid gray 2px;border-bottom:solid gray 2px;margin-bottom:0.5em;}
+span.checkbox-pattern {font-style:italic;}
+
+/* поле вопроса */
+div.question {text-align:center;}
+input.entry {font-family:serif;font-size:100%;}
+span.helper-word {font-weight:bold;}
+span.grammar-form {color:black; font-style:italic;}
+span.initial-form {color:black; font-style:italic; font-weight:bold;cursor:pointer;}
+
+/* поле ответов */
+div.answer-ok {border-bottom:solid 2px gray;padding:0.5em;text-align:justify;}
+div.answer-error {border-bottom:solid 2px gray;padding:0.5em;text-align:justify;}
+span.answer-nominativ {color:#0E0661;font-style:italic;}
+span.answer-ok {color:#007C00;font-style:italic;}
+span.answer-error {color:red;font-style:italic;}
+span.answer-grammar-form {color:gray;}
+span.correct-answer {color:#0E0661; font-style:italic;}
+span.pattern {color:#0E0661; font-style:italic;}
+span.error-literal {}
+span.ok-literal {}
+
+/* основной блок для широких и узких экранов */
+div.content {background-color:white; padding:1em; position:absolute; width:50em;margin-left:-25em;left:50%;margin-top:1em; margin-bottom:1em;border-style:solid;border-color:gray;border-width:1px;}
+div.narrow-content  {background-color:white; padding:1em;}
+
+/* копирайт и текст лицензии */
+div.copyright-link {text-align:center;margin-top:1em;}
+span.copyright-link {color:blue; cursor: pointer; font-size:70%;}
+a.copyright-link {text-decoration:none;color:black;}
+a.copyright-link:hover {color:blue;}
+div.EUL-text {display:none;background-color:white;border-style:solid;border-width:1px;padding:1em;margin-top:1em;}
+p.EUL-line {text-align:justify;}
+
+div.closebutton {text-align:center;}
+
+div.wordList {display:none;background-color:white;border-style:solid;border-width:1px;padding:1em;margin-top:1em;}
+
+div.hidden-button {position:absolute; width:20px; height:20px; right:0; top:0; cursor:crosshair;}
+
+div.hint {display:none;position:absolute;background-color:#FEFFE9;border:solid 1px gray;padding:0.5em;}

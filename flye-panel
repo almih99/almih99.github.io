@@ -1,0 +1,8 @@
+    <div class="flyes">
+      <div class="fly" onmouseover="getElementById('flyText').style.display='block'" onmouseout="getElementById('flyText').style.display='none'"></div>
+      <div class="fly-text" id="flyText">
+        <div>Поздравляю!!!</div> 
+        <div>Вы обнаружили дохлую муху!</div>
+      </div>
+    </div>
+    <div class="sign">Страничку накропал <a href="mailto:almih99@mail.ru">Михайленко Алексей</a></div>
