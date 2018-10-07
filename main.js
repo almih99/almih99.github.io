@@ -60,54 +60,6 @@ cc = new cobController;
 
 
 ////////////////////////////////////////////////////////////////////////////
-// Вывод менюшки
-////////////////////////////////////////////////////////////////////////////
-menuCounter=0;
-PageNo=0;
-function addMenuItem(menuText,ref,ThisPage)
-{
-  document.write('<div');
-  if(ThisPage!=PageNo)
-  { // требуется обработка событий
-    menuCounter++;
-    document.write(' class="menuitem"');
-    document.write(' id="mi' + menuCounter + '"');
-    document.write(' name="mi' + menuCounter + '"');
-    document.write(' onmouseover="mouseOverMenu(\'' + menuCounter +'\');"');
-    document.write(' onmouseout="mouseOutMenu(\'' + menuCounter +'\');"');
-    document.write(' onclick="mouseClickMenu(\'' + ref + '\');"');
-  }
-  else
-  { // Ссылки не требуется, выводим специальным образом...
-    document.write(' class="menuitemThis"');
-  }
-  if(ThisPage!=PageNo)
-  { // Выводим гиперссылку
-    document.write('><a class="menu" id="ma'+ menuCounter + '" href="' + ref + '">' + menuText + '</a></div>');
-  }
-  else
-  {
-    document.write('>'+menuText+'</div>');
-  }
-}
-
-function mouseOverMenu(id)
-{
-  a=document.getElementById('ma'+id).style.color="#4af18d";
-}
-
-function mouseOutMenu(id)
-{
-  a=document.getElementById('ma'+id).style.color="#f0f1d0";
-}
-
-function mouseClickMenu(ref)
-{
-  document.location=ref;
-}
-
-
-////////////////////////////////////////////////////////////////////////////
 // Определение ширины окна
 ////////////////////////////////////////////////////////////////////////////
 function getClientWidth()

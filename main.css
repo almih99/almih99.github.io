@@ -25,41 +25,37 @@ p {
   text-align:justify;
 }
 
-div.menu {
+.menu {
+  list-style-type: none;
   width: 200px;
   position:absolute;
-  left:10px;
+  left:0px;
   top: 250px;
 }
 
-div.menuitem {
-  width:180px;
-  margin-top:10px;
-  margin-bottom:5px;
-  cursor:pointer;
-  padding:3px;
-  padding-left:1em;
-  font-weight:bold;
-  background:#747563;
-}
-div.menuitemThis {
+.menuitem {
   width:180px;
   margin-top:10px;
   margin-bottom:5px;
   padding:3px;
   padding-left:1em;
   font-weight:bold;
-  color:#ebf14a;
   background:#747563;
 }
 
-a.menu {
+.menuitemThis > .menulink, .menuitemThis > .menulink:hover {
+  color:#ebf14a;
+}
+
+.menulink {
+  display: block;
   color:#f0f1d0;
   text-decoration:none;
 }
 
-a.menu:hover {
+.menulink:hover {
   text-decoration:none;
+  color: #4af18d;
 }
 
 div.head {
