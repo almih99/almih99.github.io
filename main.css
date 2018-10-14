@@ -25,18 +25,23 @@ p {
   text-align:justify;
 }
 
-.menu {
-  list-style-type: none;
-  width: 200px;
-  position:absolute;
-  left:0px;
+nav {
+  position: absolute;
   top: 250px;
+  left: 0px;
+  width: 280px;
 }
 
-.menuitem {
-  width:180px;
-  margin-top:10px;
-  margin-bottom:5px;
+nav ul {
+  list-style-type: none;
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 10px 0 5px 0;
   padding:3px;
   padding-left:1em;
   font-weight:bold;
@@ -101,9 +106,8 @@ div.cobthread {
 }
 
 div.counter {
-  margin-top:80px;
-  width:200px;
-  text-align:center;
+  margin:80px auto auto 80px;
+  width:88px;
 }
 
 div.top-banner {
