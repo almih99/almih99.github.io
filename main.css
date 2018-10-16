@@ -63,17 +63,15 @@ nav ul li {
   color: #4af18d;
 }
 
-div.head {
+header {
   margin-top:5px;
   position:absolute;
   padding:0px;
-  height:80px;
-  width:600px;
   top:0px;
   left:300px;
-  border-bottom-style:solid;
-  border-bottom-width:1px;
-  border-color:#747563;
+  height:80px;
+  width:600px;
+  border-bottom:solid 1px #747563;
   text-align:right;
 }
 

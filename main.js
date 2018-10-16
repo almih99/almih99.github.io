@@ -74,6 +74,7 @@ function getClientWidth()
 function initialize()
 {
   cc.start();
+  printVerse("motto");
   if(getClientWidth()>=1100) {
     document.getElementById("rf").style.display="block";
   }
