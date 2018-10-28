@@ -27,8 +27,8 @@ a:hover {
 
 div.content {
   float: left;
-  width:600px;
-  padding: 0px 10px;
+  width:595px;
+  padding: 0px 0px 0px 15px;
 }
 
 p {
@@ -37,7 +37,7 @@ p {
 
 nav {
   float: left;
-  width: 280px;
+  width: 290px;
   margin-top: 170px;
 }
 
@@ -94,8 +94,8 @@ div.epygraph {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-left: 290px;
-  max-width: 610px;
+  margin-left: 300px;
+  max-width: 600px;
   height: 100%;
   font-style:italic;
   font-size:90%;
@@ -184,7 +184,7 @@ p.left {
 div.right-field {
   float: left;
   width: 230px;
-  margin: 20px;
+  margin-left: 40px;
   margin-top: 190px;
   padding:3px;
   background-color:#eff1c3;
