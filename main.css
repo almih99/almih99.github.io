@@ -1,5 +1,16 @@
+/*
+body > * {
+  outline: dashed red 1px;
+}
+
+body > * > * {
+  outline: dashed green 1px;
+}
+*/
+
 body {
   margin:0;
+  padding:0;
   background-image:url('img/bg.jpg');
   background-repeat:repeat-y;
   font-family:"arial","helvetica";
@@ -15,10 +26,9 @@ a:hover {
 }
 
 div.content {
-  position:absolute;
-  left:300px;
-  top:85px;
+  float: left;
   width:600px;
+  padding: 0px 10px;
 }
 
 p {
@@ -26,10 +36,9 @@ p {
 }
 
 nav {
-  position: absolute;
-  top: 250px;
-  left: 0px;
+  float: left;
   width: 280px;
+  margin-top: 170px;
 }
 
 nav ul {
@@ -64,15 +73,10 @@ nav ul li {
 }
 
 header {
-  margin-top:5px;
-  position:absolute;
-  padding:0px;
-  top:0px;
-  left:300px;
+  position: relative;
+  margin: 0px;
+  padding: 0px;
   height:80px;
-  width:600px;
-  border-bottom:solid 1px #747563;
-  text-align:right;
 }
 
 header::before {
@@ -80,10 +84,24 @@ header::before {
   position: absolute;
   content: " ";
   top: 12px;
-  left: -170px;
+  left: 130px;
   width: 300px;
   height: 50px;
   background-image: url(img/top.gif);
+}
+
+div.epygraph {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 290px;
+  max-width: 610px;
+  height: 100%;
+  font-style:italic;
+  font-size:90%;
+  color:#44453a;
+  border-bottom:solid 1px #747563;
+  text-align: right;
 }
 
 div.cob {
@@ -159,22 +177,15 @@ img.left {
   margin-right:1em;
 }
 
-div.epygraph {
-  font-style:italic;
-  font-size:90%;
-  color:#44453a;
-}
-
 p.left {
   text-align:left;
 }
 
 div.right-field {
-  display:none;
-  position:absolute;
-  left:930px;
-  right:20px;
-  top:270px;
+  float: left;
+  width: 230px;
+  margin: 20px;
+  margin-top: 190px;
   padding:3px;
   background-color:#eff1c3;
   border-style:dotted;
