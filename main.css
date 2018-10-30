@@ -8,12 +8,18 @@ body > * > * {
 }
 */
 
+/* общие для страницы стили */
+
 body {
   margin:0;
   padding:0;
   background-image:url('img/bg.jpg');
   background-repeat:repeat-y;
   font-family:"arial","helvetica";
+}
+
+p {
+  text-align:justify;
 }
 
 a {
@@ -25,15 +31,15 @@ a:hover {
   text-decoration:underline;
 }
 
+/* блок с основным содержимым */
+
 div.content {
   float: left;
   width:595px;
   padding: 0px 0px 0px 15px;
 }
 
-p {
-  text-align:justify;
-}
+/* навигационная панель */
 
 nav {
   float: left;
@@ -72,6 +78,8 @@ nav ul li {
   color: #4af18d;
 }
 
+/* заголовок */
+
 header {
   position: relative;
   margin: 0px;
@@ -90,7 +98,7 @@ header::before {
   background-image: url(img/top.gif);
 }
 
-div.epygraph {
+.epygraph {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -103,6 +111,72 @@ div.epygraph {
   border-bottom:solid 1px #747563;
   text-align: right;
 }
+
+/* блок новостей */
+
+.right-field {
+  float: left;
+  width: 230px;
+  margin-left: 40px;
+  margin-top: 190px;
+  padding:3px;
+  background-color:#eff1c3;
+  border-style:dotted;
+  border-width:1px;
+  border-color:blue;
+  font-size:80%;
+  overflow:hidden;
+}
+
+/* футер */
+
+footer {
+  position: relative;
+  margin-left: 305px;
+  clear: both;
+}
+
+.flyes {
+  width:590px;
+  height:27px;
+  border-bottom-style:solid;
+  border-bottom-width:1px;
+  border-color:#747563;
+  margin-bottom:10px;
+}
+
+.fly {
+  width:46px;
+  height:27px;
+  margin-left:20px;
+  background-image:url('img/flye.gif');
+  background-repeat:no-repeat;
+}
+
+.fly-text {
+  display:none;
+  position:absolute;
+  background-color: #fffaa1;
+  width:17em;
+  padding:5px;
+  bottom: 50px;
+  left: 50px;
+  border: solid 1px;
+  font-size:80%;
+
+}
+
+.fly:hover + .fly-text {
+  display: block;
+}
+
+.sign {
+  font-size:80%;
+  margin-bottom:10px;
+}
+
+/* остальное еще не разобрано */
+
 
 div.cob {
   position:absolute;
@@ -137,41 +211,6 @@ div.counter {
   width:88px;
 }
 
-div.flyes {
-  width:600px;
-  height:27px;
-  border-bottom-style:solid;
-  border-bottom-width:1px;
-  border-color:#747563;
-  margin-bottom:10px;
-}
-
-div.fly {
-  width:46px;
-  height:27px;
-  margin-left:20px;
-  background-image:url('img/flye.gif');
-  background-repeat:no-repeat;
-}
-
-div.fly-text {
-  position:relative;
-  background-color:#fffaa1;
-  width:17em;
-  margin-top:-65px;
-  margin-left:65px;
-  padding:5px;
-  border-style:solid;
-  border-width:1px;
-  font-size:80%;
-  display:none;
-}
-
-div.sign {
-  font-size:80%;
-  margin-bottom:10px;
-}
-
 img.left {
   float:left;
   margin-right:1em;
@@ -181,19 +220,7 @@ p.left {
   text-align:left;
 }
 
-div.right-field {
-  float: left;
-  width: 230px;
-  margin-left: 40px;
-  margin-top: 190px;
-  padding:3px;
-  background-color:#eff1c3;
-  border-style:dotted;
-  border-width:1px;
-  border-color:blue;
-  font-size:80%;
-  overflow:hidden;
-}
+
 
 div.item {
   border-width:2px;
