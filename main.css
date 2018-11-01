@@ -31,9 +31,15 @@ a:hover {
   text-decoration:underline;
 }
 
+img.left {
+  float:left;
+  margin: 0 1em 1em 0;
+  border-radius: 10px;
+}
+
 /* блок с основным содержимым */
 
-div.content {
+main {
   float: left;
   width:595px;
   padding: 0px 0px 0px 15px;
@@ -209,11 +215,6 @@ div.cobthread {
 div.counter {
   margin:80px auto auto 80px;
   width:88px;
-}
-
-img.left {
-  float:left;
-  margin-right:1em;
 }
 
 p.left {
