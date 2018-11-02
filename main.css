@@ -104,6 +104,16 @@ header::before {
   background-image: url(img/top.gif);
 }
 
+header::after {
+  position:absolute;
+  content: " ";
+  width:300px;
+  height:250px;
+  left:0px;
+  top:0px;
+  background-image:url('img/net.gif');
+}
+
 .epygraph {
   display: flex;
   flex-direction: column;
@@ -191,15 +201,6 @@ div.cob {
   background-image:url('img/cob2.gif');
   left:82px;
   top:50px;
-}
-
-div.cobnet {
-  position:absolute;
-  width:300px;
-  height:250px;
-  left:0px;
-  top:0px;
-  background-image:url('img/net.gif');
 }
 
 div.cobthread {
