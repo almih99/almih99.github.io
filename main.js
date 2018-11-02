@@ -59,13 +59,6 @@ cobController.prototype.start=cobController_start;
 cc = new cobController;
 
 
-////////////////////////////////////////////////////////////////////////////
-// Определение ширины окна
-////////////////////////////////////////////////////////////////////////////
-function getClientWidth()
-{
-  return document.compatMode=='CSS1Compat' && !window.opera?document.documentElement.clientWidth:document.body.clientWidth;
-}
 
 ////////////////////////////////////////////////////////////////////////////
 // Вызывается по событию onLoad
@@ -75,7 +68,4 @@ function initialize()
 {
   cc.start();
   printVerse("motto");
-  if(getClientWidth()>=1100) {
-    document.getElementById("rf").style.display="block";
-  }
 }
