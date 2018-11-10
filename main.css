@@ -37,6 +37,11 @@ img.left {
   border-radius: 10px;
 }
 
+.signature {
+  text-align: right;
+  font-style: italic;
+}
+
 /* блок с основным содержимым */
 
 main {
