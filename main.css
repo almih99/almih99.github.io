@@ -11,6 +11,13 @@ body > * > * {
 /* общие для страницы стили */
 
 body {
+  display: grid;
+  grid-template-columns: 290px 600px 300px;
+  grid-template-rows: 80px auto auto;
+  grid-template-areas:
+   "header header ."
+   "nav main news"
+   "footer footer .";
   margin:0;
   padding:0;
   background-image:url('img/bg.jpg');
@@ -45,14 +52,16 @@ img.left {
 /* блок с основным содержимым */
 
 main {
+  grid-area: main;
   float: left;
-  width:595px;
+  max-width:590px;
   padding: 0px 0px 0px 15px;
 }
 
 /* навигационная панель */
 
 nav {
+  grid-area: nav;
   float: left;
   width: 290px;
   margin-top: 170px;
@@ -92,7 +101,9 @@ nav ul li {
 /* заголовок */
 
 header {
+  grid-area: header;
   position: relative;
+  max-width: 895px;
   margin: 0px;
   padding: 0px;
   height:80px;
@@ -125,8 +136,7 @@ header::after {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-left: 300px;
-  max-width: 600px;
+  margin-left: 290px;
   height: 100%;
   font-style:italic;
   font-size:90%;
@@ -143,6 +153,8 @@ header::after {
 /* блок новостей */
 
 .right-field {
+  grid-area: news;
+  align-self: start;
   float: left;
   width: 230px;
   margin-left: 40px;
@@ -159,8 +171,9 @@ header::after {
 /* футер */
 
 footer {
+  grid-area: footer;
   position: relative;
-  width: 595px;
+  max-width: 590px;
   margin-left: 305px;
   clear: both;
 }
@@ -260,4 +273,12 @@ a.button {
 a.button:hover {
   background-color:#FDFFDD;
   text-decoration:none;
+}
+
+/* Адаптивность */
+
+@media screen and (max-width: 1200px) {
+  .right-field {
+    display: none;
+  }
 }
