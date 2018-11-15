@@ -20,6 +20,7 @@ body {
    "footer footer .";
   margin:0;
   padding:0;
+  background-color: #EFF0D0;
   background-image:url('img/bg.jpg');
   background-repeat:repeat-y;
   font-family:"arial","helvetica";
