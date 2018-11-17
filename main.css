@@ -39,10 +39,20 @@ a:hover {
   text-decoration:underline;
 }
 
-img.left {
-  float:left;
+.left {
+  float: left;
+}
+
+
+img.photo {
   margin: 0 1em 1em 0;
   border-radius: 10px;
+  filter: sepia(70%);
+  transition: filter 2s;
+}
+
+img.photo:hover {
+  filter: sepia(0%);
 }
 
 .signature {
