@@ -261,9 +261,33 @@ div.item-title {
   font-weight:bold;
 }
 
-div.item-description {
+.item-description {
   text-align:justify;
   padding:5px;
+  clear: both;
+}
+
+.item-description p {
+  margin: 0 0 0.7ex 0;
+}
+
+.item-info {
+  text-align:justify;
+  padding:5px;
+  clear: both;
+}
+
+.item-info div:nth-child(2n+1){
+  width: 7em;
+  float: left;
+}
+
+.item-info div:nth-child(2n){
+  /* пока ничего*/
+}
+
+.item-info div:nth-child(2n)::before{
+  content: ' : '
 }
 
 table.property, tr.property, td.property {
