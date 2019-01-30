@@ -63,4 +63,7 @@ function initialize()
 {
   cobControl.start();
   printVerse("motto");
+
+  showHolyday("rf")
+  showNews("rf", "news.json", 3);
 }

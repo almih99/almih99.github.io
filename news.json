@@ -1,0 +1,33 @@
+{
+  "status": "ok",
+  "totalResults": 1,
+  "articles": [
+    {
+      "source": {
+        "id": null,
+        "name": "almih99.github.io"
+      },
+      "author": null,
+      "title": "Новости ",
+      "description": "Реализованы новости",
+      "url": null,
+      "urlToImage": null,
+      "publishedAt": "2019-01-30",
+      "content": "На сайте реализованы новости.\nНе сказать, что обновления бывают часто и за ними кто-то будет следить, но тем не менее..."
+    },
+
+    {
+      "source": {
+        "id": null,
+        "name": "almih99.github.io"
+      },
+      "author": null,
+      "title": "Новости ",
+      "description": "Добавлена игра «Сапёр»",
+      "url": "https://almih99.github.io/portfolio/miner/example/miner-wrapper.html",
+      "urlToImage": "portfolio/miner/img/screenshot-horizontal.png",
+      "publishedAt": "2019-01-28T11:26:42+00:00",
+      "content": "В портфолио добалвена JavaScript реализация игры «Сапёр»"
+    }
+  ]
+}

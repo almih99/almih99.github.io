@@ -170,13 +170,62 @@ header::after {
   width: 230px;
   margin-left: 40px;
   margin-top: 190px;
-  padding:3px;
-  background-color:#eff1c3;
-  border-style:dotted;
-  border-width:1px;
-  border-color:blue;
+  padding:0px;
+  border: solid 2px #C5C694;
   font-size:80%;
+  color: #666657;
   overflow:hidden;
+}
+
+.right-field::before {
+  content: "Новости";
+  display: block;
+  font-size 120%;
+  font-weight: bold;
+  text-align: center;
+  padding: 2px;
+  background-color: #C5C694;
+}
+
+.right-field a {
+  color: inherit;
+}
+
+.right-field-news-item {
+  margin: 5px;
+  border-bottom: solid 2px #C5C694;
+}
+
+.right-field-news-item:last-child {
+  border-bottom: none;
+}
+
+
+.right-field-news-date {
+  text-align: right;
+  font-size: 80%;
+}
+
+.right-field-news-header {
+  font-weight: bold;
+}
+
+.right-field-news-image img {
+  max-width: 100%;
+}
+
+.right-field-news-body {
+
+}
+
+.right-field-news-body p {
+  padding: 0px;
+  margin: 0px;
+}
+
+.right-field-news-link {
+  text-align: right;
+  font-size: 150%;
 }
 
 /* футер */
