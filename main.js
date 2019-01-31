@@ -56,6 +56,15 @@ cobControl = {
 }
 
 ////////////////////////////////////////////////////////////////////////////
+// Отработка щелчка по логотипу
+////////////////////////////////////////////////////////////////////////////
+function onLogoClick(e) {
+  if(e.pageX>129 && e.pageX <431 && e.pageY>11 && e.pageY<61) {
+      location.assign("index.htm");
+  }
+}
+
+////////////////////////////////////////////////////////////////////////////
 // Вызывается по событию onLoad
 ////////////////////////////////////////////////////////////////////////////
 
@@ -63,7 +72,7 @@ function initialize()
 {
   cobControl.start();
   printVerse("motto");
-
+  document.querySelector("header").addEventListener('click', onLogoClick);
   showHolyday("rf")
   showNews("rf", "news.json", 3);
 }
