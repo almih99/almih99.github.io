@@ -21,6 +21,7 @@ body {
   margin:0;
   padding:0;
   background-color: #EFF0D0;
+  color: #46473c;
   background-image:url('img/bg.jpg');
   background-repeat:repeat-y;
   font-family:"arial","helvetica";
@@ -37,6 +38,10 @@ a {
 
 a:hover {
   text-decoration:underline;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #46473c;
 }
 
 .left {
@@ -318,6 +323,11 @@ div.item-title {
 
 .item-description p {
   margin: 0 0 0.7ex 0;
+}
+
+.item-shorttext {
+  display: inline-block;
+  max-width: calc(100% - 270px);
 }
 
 .item-info {

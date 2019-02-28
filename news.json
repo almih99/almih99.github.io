@@ -1,7 +1,21 @@
 {
   "status": "ok",
-  "totalResults": 1,
+  "totalResults": 3,
   "articles": [
+    {
+      "source": {
+        "id": null,
+        "name": "almih99.github.io"
+      },
+      "author": null,
+      "title": "Новости ",
+      "description": "Обновление портфолио",
+      "url": "https://almih99.github.io/portfolio/yokngalam/index.html",
+      "urlToImage": null,
+      "publishedAt": "2019-02-28",
+      "content": "В раздел Портфолио добавлена еще одна верстка сайта."
+    },
+
     {
       "source": {
         "id": null,
