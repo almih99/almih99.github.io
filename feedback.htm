@@ -42,7 +42,37 @@
 
   <main>
     <h1>Обратная связь</h1>
-    <p>Страничка пока не готова.</p>
+    <p>Если вы хотите связаться со мной, то самым простым вариантом будет заполнить расположенную ниже форму.</p>
+    <p>Вводить свое имя и адрес электронной почты не обязательно, однако рекомендуется если вы рассчитываете на ответ.</p>
+    <div class="item feedback">
+      <div class="item-title">
+        Отправить письмо
+      </div>
+      <div class="item-description">
+        <form method="POST" action="https://formspree.io/almih99@mail.ru">
+          <div class="row">
+            <div class="cell-50">
+              <input class="name-field" type="text" name="name" placeholder="Представьтесь, пожалуйста">
+            </div>
+            <div class="cell-50">
+              <input class="email-field" type="email" name="email" placeholder="Ваш e-mail">
+            </div>
+          </div>
+          <div class="row">
+            <div class="cell-100">
+              <textarea class="message-field" rows="10" name="message" placeholder="Ваше сообщение"></textarea>
+            </div>
+          </div>
+          <div class="row">
+            <div class="cell-100">
+              <button type="submit">Отправить сообщение</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+
   </main>
 
   <!-- панель новостей -->
@@ -52,7 +82,7 @@
   <!-- Футер с мухой. -->
   <footer>
     <div class="fly"></div>
-    <div class="sign">Страничка <a href="mailto:almih99@mail.ru">Михайленко Алексея</a></div>
+    <div class="sign">Страничка <a href="feedback.htm">Михайленко Алексея</a></div>
   </footer>
 
 </body>

@@ -369,6 +369,55 @@ a.button:hover {
   text-decoration:none;
 }
 
+/* feedback */
+
+.feedback input,
+.feedback textarea {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 6px;
+  font-family: arial, sans-serif;
+  font-size: 1em;
+  border-radius: 5px;
+  background-color: #fefee4;
+}
+
+.feedback .row {
+ width: 100%;
+ clear: both;
+}
+
+.feedback .cell-50 {
+  box-sizing: border-box;
+  float: left;
+  width: 50%;
+  padding: 5px;
+}
+
+.feedback .cell-100 {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 5px;
+}
+
+.feedback button {
+  display: inline-block;
+  background-color:#EFF1D1;
+  color:#44453A;
+  font-size: 1em;
+  padding-left:1em;
+  padding-right:1em;
+  border: solid 1px;
+}
+
+.feedback button:hover {
+  background-color:#FDFFDD;
+}
+
+.feedback textarea {
+  resize: vertical;
+}
+
 /* Адаптивность */
 
 @media screen and (max-width: 1200px) {

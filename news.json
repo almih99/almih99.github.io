@@ -1,7 +1,22 @@
 {
   "status": "ok",
-  "totalResults": 3,
+  "totalResults": 4,
   "articles": [
+
+    {
+      "source": {
+        "id": null,
+        "name": "almih99.github.io"
+      },
+      "author": null,
+      "title": "Новости ",
+      "description": "Добавлена форма обратной связи",
+      "url": "https://almih99.github.io/feedback.htm",
+      "urlToImage": null,
+      "publishedAt": "2019-03-02",
+      "content": "Теперь связаться со мной можно при помощи формы обратной связи, расположенной на соответствующей странице."
+    },
+
     {
       "source": {
         "id": null,
