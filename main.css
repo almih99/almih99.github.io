@@ -256,12 +256,28 @@ footer {
   position: absolute;
   background-color: #eff0d0;
   width:17em;
-  padding:5px;
-  bottom: 50px;
-  left: 50px;
+  padding:8px;
+  bottom: 60px;
+  left: 5px;
   border: solid 1px gray;
-  box-shadow: 2px 2px 5px;
+  border-radius: 5px;
+  /*box-shadow: 2px 2px 5px;*/
   font-size:80%;
+}
+
+.fly:hover::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #eff0d0;
+  border: solid 1px gray;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  transform: rotate(45deg);
+  left: 40px;
+  bottom: 55px;
+  z-index: 10;
 }
 
 .sign {
