@@ -238,6 +238,7 @@ header::after {
 footer {
   grid-area: footer;
   position: relative;
+  margin-top:40px;
   max-width: 590px;
   margin-left: 305px;
   clear: both;
@@ -282,8 +283,13 @@ footer {
 
 .sign {
   font-size:80%;
+  color: hsl(61, 19%, 40%);
   margin-bottom:10px;
   border-top: solid 1px #747563;
+}
+
+.sign a {
+  color: inherit;
 }
 
 /* паук */
@@ -329,6 +335,7 @@ div.item-title {
   background-color:#C5C694;
   color:#44453A;
   font-weight:bold;
+  padding: 0 5px;
 }
 
 .item-description {
