@@ -17,8 +17,10 @@ cobControl = {
   // this function makes one step and set next step in a queue
   move: function() {
     this.position+=this.speed;
-    this.cob.style.top = this.position + "px";
-    this.thread.style.height = this.position>50 ? (this.position-50) + "px" : "0px";
+    if(this.cob.offsetWidth > 0) { // if visible
+      this.cob.style.top = this.position + "px";
+      this.thread.style.height = Math.max(this.position-50, 0) + "px";
+    }
     // Определяемся куда хотим дальше двигаться...
     if((this.goalPoint-this.position)*this.speed<0)
     { // тут мы оказались если пересекли точку назначения
@@ -56,15 +58,6 @@ cobControl = {
 }
 
 ////////////////////////////////////////////////////////////////////////////
-// Отработка щелчка по логотипу
-////////////////////////////////////////////////////////////////////////////
-function onLogoClick(e) {
-  if(e.pageX>129 && e.pageX <431 && e.pageY>11 && e.pageY<61) {
-      location.assign("index.htm");
-  }
-}
-
-////////////////////////////////////////////////////////////////////////////
 // Вызывается по событию onLoad
 ////////////////////////////////////////////////////////////////////////////
 
@@ -72,7 +65,6 @@ function initialize()
 {
   cobControl.start();
   printVerse("motto");
-  document.querySelector("header").addEventListener('click', onLogoClick);
   showHolyday("rf")
   showNews("rf", "news.json", 3);
 }

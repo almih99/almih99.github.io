@@ -83,6 +83,10 @@ nav {
   margin-top: 170px;
 }
 
+nav.xs-hide {
+  display: block;
+}
+
 nav ul {
   list-style-type: none;
   width: 200px;
@@ -125,7 +129,7 @@ header {
   height:80px;
 }
 
-header::before {
+header::before--- {
   display: block;
   position: absolute;
   content: " ";
@@ -159,6 +163,21 @@ header::after {
   color:#44453a;
   border-bottom:solid 1px #747563;
   text-align: right;
+}
+
+.brand {
+  display: block;
+  position: absolute;
+  top: 12px;
+  left: 130px;
+  width: 300px;
+  height: 50px;
+  color: transparent;
+  background-image: url(img/top.gif);
+}
+
+.menu-dropdown-button {
+  display: none;
 }
 
 .counter {
@@ -351,6 +370,11 @@ div.item-title {
 .item-shorttext {
   display: inline-block;
   max-width: calc(100% - 270px);
+  text-align: left;
+}
+
+.item-shorttext * {
+  text-align: left;
 }
 
 .item-info {
@@ -365,11 +389,17 @@ div.item-title {
 }
 
 .item-info div:nth-child(2n){
-  /* пока ничего*/
+  position: relative;
+  padding-left: 10px;
+  display: inline-block;
+  width: calc(100% - 7em - 10px);
+  text-align: left;
 }
 
 .item-info div:nth-child(2n)::before{
-  content: ' : '
+  content: ':';
+  position: absolute;
+  left: 0;
 }
 
 table.property, tr.property, td.property {
@@ -446,5 +476,165 @@ a.button:hover {
 @media screen and (max-width: 1200px) {
   .right-field {
     display: none;
+  }
+}
+
+@media screen and (max-width: 925px) {
+
+  /* placement */
+  body {
+   display: grid;
+   grid-template-columns: 100%;
+   grid-template-rows: 80px auto auto auto;
+   grid-template-areas:
+    "header"
+    "nav"
+    "main"
+    "footer";
+   background-image: none;
+ }
+
+ /* header */
+ header {
+   position: relative;
+   width: 100%;
+   max-width: none;
+   height: 80px;
+   background-color: #46473c;
+ }
+
+  header::before, header::after {
+    all: unset;
+  }
+
+  .epygraph {
+    display: none;
+  }
+
+  .brand {
+    display: block;
+    position: static;
+    width: auto;
+    height: auto;
+    float: left;
+    color: #cacc92;
+    font-size: 36px;
+    line-height: 80px;
+    font-weight: bold;
+    padding-left: 20px;
+  }
+
+  .brand:hover,
+  .brand:active {
+    text-decoration: none;
+    color: #eff0d0;
+  }
+
+  .menu-dropdown-button {
+    display: inline-block;
+    float: right;
+    width: 50px;
+    height: 50px;
+    margin: 15px;
+    background-color: #cacc92;
+    border: none;
+    border-radius: 5px;
+    background-image: url(img/btn-bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .menu-dropdown-button:hover {
+    background-color: #eff0d0;
+  }
+
+  .menu-dropdown-button:active {
+    background-color: #eff0d0;
+    transform: translate(2px, 2px);
+  }
+
+ /* menu */
+
+  nav {
+    float: none;
+    margin: 0;
+    width: 100%;
+    background-color: rgba(0,0,0,0.05);
+  }
+
+  nav.xs-hide {
+    display: none;
+  }
+
+  nav ul {
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+  }
+
+  nav ul li {
+    margin: 5px;
+  }
+
+  nav ul a {
+    font-size: 18px;
+    padding: 5px;
+  }
+
+  nav .counter {
+    margin: 20px auto;
+  }
+
+  /* паук */
+
+  div.cob, div.cobthread {
+    display: none;
+  }
+
+  /* основной блок */
+
+  main {
+    max-width: none;
+    padding-right: 15px;
+  }
+
+  /* футер*/
+
+  footer {
+    grid-area: footer;
+    position: relative;
+    margin-top:40px;
+    max-width: none;
+    margin-left: 15px;
+    margin-right: 15px;
+    clear: both;
+  }
+
+}
+
+@media screen and (max-width: 470px) {
+  p {
+    text-align: left;
+  }
+
+  .brand {
+    font-size: 24px;
+    padding-left: 15px;
+  }
+
+  img.photo.left {
+    float: none;
+  }
+
+  .item .item-shorttext {
+    display: block;
+    width: auto;
+    max-width: none;
+    clear: both;
+    padding-top: 1em;
+  }
+
+  .item-description {
+    text-align:left;
   }
 }
