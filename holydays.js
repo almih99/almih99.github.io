@@ -22,7 +22,6 @@ var holydays=
 function insertHtmlElement(parent, name, classname) {
   if(typeof(parent)==="string") parent=document.getElementById(parent);
   if(!parent) {
-    console.log("bad parent element");
     return;
    }
   var element = document.createElement(name);
@@ -77,9 +76,9 @@ function showNews(whereID, src, count) {
   xhr.open("GET", src, true);
   xhr.onload = function(e){
 		if (xhr.status == 200) {
-		  var res = JSON.parse(xhr.responseText);
+      var res = JSON.parse(xhr.responseText);
 		} else {
-		  return;
+      return;
 		}
     for(var i=0; i<count; i++) {
       if(res.articles[i]) {

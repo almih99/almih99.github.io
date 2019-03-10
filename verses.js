@@ -42,7 +42,7 @@ function printVerse(placeID) {
   var selected=Math.floor(Math.random()*verses.length);
   var v=verses[selected].split('*');
   var insertPoint = document.getElementById(placeID);
-  for(i=0;i<v.length;i++) {
+  for(var i=0;i<v.length;i++) {
     var d = document.createElement("div");
     var t = document.createTextNode(v[i]);
     d.appendChild(t);
