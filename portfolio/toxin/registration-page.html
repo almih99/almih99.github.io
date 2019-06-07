@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Toxin</title>
+    <script src="index.js"></script>
+    <link href="index.css" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+  </head>
+  <body class="account-registration-page">
+    <nav class="horizontal-menu"><a class="toxin-logo horizontal-menu__logo" href="#"></a>
+      <button class="horizontal-menu__toggle-view" type="button"><span class="horizontal-menu__hr"></span><span class="horizontal-menu__hr"></span><span class="horizontal-menu__hr"></span></button>
+      <ul class="horizontal-menu__main-list">
+        <li class="horizontal-menu__item horizontal-menu__item_current"><a class="horizontal-menu__link" href="#">О нас</a></li>
+        <li class="horizontal-menu__item horizontal-menu__item_dropdown"><a class="horizontal-menu__link" href="#">Услуги</a>
+          <ul class="horizontal-menu__submenu-list horizontal-menu__submenu-list_position_center">
+            <li class="horizontal-menu__submenu-list-item"><a class="horizontal-menu__submenu-link" href="#">Парим</a></li>
+            <li class="horizontal-menu__submenu-list-item"><a class="horizontal-menu__submenu-link" href="#">Варим</a></li>
+            <li class="horizontal-menu__submenu-list-item"><a class="horizontal-menu__submenu-link" href="#">Жарим </a></li>
+          </ul>
+        </li>
+        <li class="horizontal-menu__item"><a class="horizontal-menu__link" href="#">Вакансии</a></li>
+        <li class="horizontal-menu__item"><a class="horizontal-menu__link" href="#">Новости</a></li>
+        <li class="horizontal-menu__item horizontal-menu__item_dropdown"><a class="horizontal-menu__link" href="#">Соглашения</a>
+          <ul class="horizontal-menu__submenu-list horizontal-menu__submenu-list_position_center">
+            <li class="horizontal-menu__submenu-list-item"><a class="horizontal-menu__submenu-link" href="#">Об уплате алиментов</a></li>
+            <li class="horizontal-menu__submenu-list-item"><a class="horizontal-menu__submenu-link" href="#">О расторжении договора</a></li>
+            <li class="horizontal-menu__submenu-list-item"><a class="horizontal-menu__submenu-link" href="#">О разделе имущества</a></li>
+          </ul>
+        </li>
+        <li class="horizontal-menu__item">
+          <button class="button horizontal-menu__enter-button button_white" type="button">Войти
+          </button>
+        </li>
+        <li class="horizontal-menu__item">
+          <button class="button horizontal-menu__register-button" type="button">Зарегистрироваться
+          </button>
+        </li>
+      </ul>
+    </nav>
+    <div class="account-registration-page__background">
+      <div class="account-registration account-registration-page__account-registration-widget">
+        <form>
+          <div class="h1 account-registration__heading">Регистрация аккаунта</div>
+          <input class="text-field account-registration__first-name" name="firstname" type="text" placeholder="Имя">
+          <input class="text-field account-registration__last-name" name="secondname" type="text" placeholder="Фамилия">
+          <div class="account-registration__radio-wrapper">
+            <!-- radiobutton-->
+            <div class="radiobutton">
+              <input class="radiobutton__input" type="radio" id="autoid-1" name="sex" value="male" checked>
+              <label class="radiobutton__label" for="autoid-1"><span class="radiobutton__presentation"></span>Мужчина
+              </label>
+            </div>
+            <!-- radiobutton-->
+          </div>
+          <div class="account-registration__radio-wrapper">
+            <!-- radiobutton-->
+            <div class="radiobutton">
+              <input class="radiobutton__input" type="radio" id="autoid-2" name="sex" value="female">
+              <label class="radiobutton__label" for="autoid-2"><span class="radiobutton__presentation"></span>Женщина
+              </label>
+            </div>
+            <!-- radiobutton-->
+          </div>
+          <div class="h3 account-registration__birthday-label">Дата рождения</div>
+          <input class="text-field date-text-field account-registration__birthday-field" name="birthdayDate" type="text" placeholder="ДД.ММ.ГГГГ" spellcheck="false" data-inputmask="'alias': 'datetime', 'inputFormat': 'dd.mm.yyyy', 'placeholder': 'ДД.ММ.ГГГГ'">
+          <div class="h3 account-registration__login-data_label">Данные для входа в сервис</div>
+          <input class="text-field account-registration__email-field" name="email" type="email" placeholder="Email">
+          <input class="text-field account-registration__password-field" name="password" type="password" placeholder="Пароль">
+          <!-- toggle-->
+          <div class="toggle">
+            <input class="toggle__input" type="checkbox" id="autoid-3" name="recievoffers">
+            <label class="toggle__label" for="autoid-3"><span class="toggle__presentation"></span>Получать спецпредложения
+            </label>
+          </div>
+          <!-- /toggle-->
+          <button class="button button_arrowed account-registration__go-to-pay-button" type="submit">Перейти к оплате
+          </button>
+          <div class="account-registration__to-login">
+            <div class="account-registration__to-login-text text">Уже есть аккаунт на Toxin</div>
+            <button class="button button_white account-registration__enter-button" type="button">Войти
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <footer class="big-footer">
+      <div class="big-footer__body">
+        <div class="big-footer__common-info"><a class="toxin-logo big-footer__logo" href="#"></a>
+          <div class="big-footer__common-info-text">Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»</div>
+        </div>
+        <div class="big-footer__links">
+          <h3 class="h3 big-footer__h3">Навигация</h3><a class="big-footer__link" href="#">О нас</a><a class="big-footer__link" href="#">Новости</a><a class="big-footer__link" href="#">Служба поддержки</a><a class="big-footer__link" href="#">Услуги</a>
+        </div>
+        <div class="big-footer__links">
+          <h3 class="h3 big-footer__h3">О нас</h3><a class="big-footer__link" href="#">О сервисе</a><a class="big-footer__link" href="#">Наша команда</a><a class="big-footer__link" href="#">Вакансии</a><a class="big-footer__link" href="#">Инвесторы       </a>
+        </div>
+        <div class="big-footer__links">
+          <h3 class="h3 big-footer__h3">Служба поддержки</h3><a class="big-footer__link" href="#">Соглашения</a><a class="big-footer__link" href="#">Сообщества</a><a class="big-footer__link" href="#">Связь с нами</a>
+        </div>
+        <div class="big-footer__subscribe">
+          <h3 class="h3 big-footer__h3">Подписка</h3>
+          <div class="big-footer__subscribe-text">Получайте специальные предложения и новости сервиса</div>
+          <!-- subscription-text-field-->
+          <div class="subscription-text-field big-footer__subscription-text-field">
+            <input class="text-field subscription-text-field__text" name="feedback" type="text" placeholder="Email">
+            <button class="subscription-text-field__button" type="button" onclick="alert('ok')"></button>
+          </div>
+          <!-- /subscription-text-field-->
+        </div>
+      </div>
+      <div class="big-footer__footer">
+        <div class="big-footer__footer-text">Copyright © 2018 Toxin отель. Все права защищены.</div>
+        <div class="big-footer__footer-socials"><a class="social-button social-button_twitter" href="#"></a><a class="social-button social-button_facebook" href="#"></a><a class="social-button social-button_instagram" href="#"></a></div>
+      </div>
+    </footer>
+  </body>
+</html>

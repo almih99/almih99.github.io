@@ -1,0 +1,1322 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Страница тестирования ui-kit</title>
+    <script src="index.js"></script>
+    <link href="index.css" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+  </head>
+  <body>
+    <h1 class="h1">Страница тестирования и отладки элементов интерфейса </h1>
+    <div class="column-holder">
+      <div class="column">
+        <div class="separator"> 
+          <h2 class="h2">text-field</h2>
+          <input class="text-field ui-kit-text-field" name="email" type="text" placeholder="Email">
+        </div>
+        <div class="separator"> 
+          <h2 class="h2">subscription-text-field</h2>
+          <!-- subscription-text-field-->
+          <div class="subscription-text-field ui-kit-subscription-text-field">
+            <input class="text-field subscription-text-field__text" name="stf" type="text" placeholder="Email">
+            <button class="subscription-text-field__button" type="button" onclick="alert('ok')"></button>
+          </div>
+          <!-- /subscription-text-field-->
+        </div>
+        <div class="separator"> 
+          <h2 class="h2">date-text-field</h2>
+          <input class="text-field date-text-field ui-kit-date-text-field" type="text" placeholder="ДД.ММ.ГГГГ" spellcheck="false" data-inputmask="'alias': 'datetime', 'inputFormat': 'dd.mm.yyyy', 'placeholder': 'ДД.ММ.ГГГГ'">
+        </div>
+        <div class="separator"> 
+          <h2 class="h2">dropdown</h2>
+          <!-- dropdown-->
+          <div class="dropdown ui-kit-dropdown">
+            <input class="dropdown__show" type="checkbox" id="autoid-1">
+            <label class="dropdown__backdrop" for="autoid-1"></label>
+            <label class="dropdown__label" for="autoid-1">initial content</label>
+            <!-- dropdown content-->
+            <div class="dropdown__content">
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet cupiditate ipsum obcaecati repellendus accusantium praesentium natus nihil excepturi quia.</p>
+            </div>
+            <!-- /dropdown content-->
+          </div>
+          <!-- /dropdown-->
+        </div>
+        <div class="separator"> 
+          <h2 class="h2">date-dropdown</h2>
+          <!-- dropdown-->
+          <div class="dropdown date-dropdown ui-kit-date-dropdown">
+            <input class="dropdown__show date-dropdown__trigger" type="checkbox" id="autoid-2">
+            <label class="dropdown__backdrop" for="autoid-2"></label>
+            <label class="dropdown__label date-dropdown__label" for="autoid-2">ДД.ММ.ГГГГ</label>
+            <!-- dropdown content-->
+            <div class="dropdown__content date-dropdown__content">
+              <div class="calendar">
+                <input class="calendar__result" type="hidden" name="myname">
+                <div class="calendar__pane datepicker-here"></div>
+                <div class="calendar__button-box">
+                  <button class="button button_tiny calendar__clear-button calendar__button-label_gray" type="button">Очистить
+                  </button>
+                  <button class="button button_tiny calendar__apply-button" type="button">Применить
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- /dropdown content-->
+          </div>
+          <!-- /dropdown-->
+        </div>
+        <div class="separator"> 
+          <h2 class="h2">double-date-dropdown</h2>
+          <!-- double-date-dropdown-->
+          <div class="double-date-dropdown ui-kit-double-date-dropdown">
+            <div class="double-date-dropdown__from-field">
+              <!-- dropdown-->
+              <div class="dropdown date-dropdown">
+                <input class="dropdown__show date-dropdown__trigger" type="checkbox" id="autoid-3">
+                <label class="dropdown__backdrop" for="autoid-3"></label>
+                <label class="dropdown__label date-dropdown__label" for="autoid-3">ДД.ММ.ГГГГ</label>
+                <!-- dropdown content-->
+                <div class="dropdown__content date-dropdown__content">
+                  <div class="calendar">
+                    <input class="calendar__result" type="hidden" name="someother[0]">
+                    <div class="calendar__pane datepicker-here"></div>
+                    <div class="calendar__button-box">
+                      <button class="button button_tiny calendar__clear-button calendar__button-label_gray" type="button">Очистить
+                      </button>
+                      <button class="button button_tiny calendar__apply-button" type="button">Применить
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <!-- /dropdown content-->
+              </div>
+              <!-- /dropdown-->
+            </div>
+            <div class="double-date-dropdown__strut"></div>
+            <div class="double-date-dropdown__to-field">
+              <!-- dropdown-->
+              <div class="dropdown date-dropdown">
+                <input class="dropdown__show date-dropdown__trigger" type="checkbox" id="autoid-4">
+                <label class="dropdown__backdrop" for="autoid-4"></label>
+                <label class="dropdown__label date-dropdown__label" for="autoid-4">ДД.ММ.ГГГГ</label>
+                <!-- dropdown content-->
+                <div class="dropdown__content date-dropdown__content">
+                  <div class="calendar">
+                    <input class="calendar__result" type="hidden" name="someother[1]">
+                    <div class="calendar__pane datepicker-here"></div>
+                    <div class="calendar__button-box">
+                      <button class="button button_tiny calendar__clear-button calendar__button-label_gray" type="button">Очистить
+                      </button>
+                      <button class="button button_tiny calendar__apply-button" type="button">Применить
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <!-- /dropdown content-->
+              </div>
+              <!-- /dropdown-->
+            </div>
+          </div>
+          <!-- /double-date-dropdown-->
+        </div>
+        <div class="separator"> 
+          <h2 class="h2">date-range-dropdown</h2>
+          <!-- dropdown-->
+          <div class="dropdown date-range-dropdown ui-kit-date-range-dropdown">
+            <input class="dropdown__show date-range-dropdown__trigger" type="checkbox" id="autoid-5">
+            <label class="dropdown__backdrop" for="autoid-5"></label>
+            <label class="dropdown__label date-range-dropdown__label" for="autoid-5">Выберите даты</label>
+            <!-- dropdown content-->
+            <div class="dropdown__content date-range-dropdown__content">
+              <div class="calendar">
+                <input class="calendar__result" type="hidden" name="daterange">
+                <div class="calendar__pane datepicker-here" data-range="true" data-date-format="dd M" data-multiple-dates-separator=" - "></div>
+                <div class="calendar__button-box">
+                  <button class="button button_tiny calendar__clear-button calendar__button-label_gray" type="button">Очистить
+                  </button>
+                  <button class="button button_tiny calendar__apply-button" type="button">Применить
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- /dropdown content-->
+          </div>
+          <!-- /dropdown-->
+        </div>
+      </div>
+      <div class="column">
+        <div class="separator"> 
+          <h2 class="h2">checkbox</h2>
+          <!-- checkbox-->
+          <div class="checkbox">
+            <input class="checkbox__input" type="checkbox" id="autoid-6" name="myCheckbox" disabled>
+            <label class="checkbox__label" for="autoid-6"><span class="checkbox__presentation"></span>Можно курить
+            </label>
+          </div>
+          <!-- /checkbox-->
+          <!-- checkbox-->
+          <div class="checkbox">
+            <input class="checkbox__input" type="checkbox" id="autoid-7" name="myCheckbox" checked="checked">
+            <label class="checkbox__label" for="autoid-7"><span class="checkbox__presentation"></span>Можно c питомцами
+            </label>
+          </div>
+          <!-- /checkbox-->
+          <!-- checkbox-->
+          <div class="checkbox">
+            <input class="checkbox__input" type="checkbox" id="autoid-8" name="myCheckbox">
+            <label class="checkbox__label" for="autoid-8"><span class="checkbox__presentation"></span>Можно пригласить гостей <br>(до 10 человек)
+            </label>
+          </div>
+          <!-- /checkbox-->
+        </div>
+        <div class="separator"> 
+          <h2 class="h2">radiobutton</h2>
+          <!-- radiobutton-->
+          <div class="radiobutton">
+            <input class="radiobutton__input" type="radio" id="autoid-9" name="sex" value="male" checked>
+            <label class="radiobutton__label" for="autoid-9"><span class="radiobutton__presentation"></span>Мужчина
+            </label>
+          </div>
+          <!-- radiobutton-->
+          <!-- radiobutton-->
+          <div class="radiobutton">
+            <input class="radiobutton__input" type="radio" id="autoid-10" name="sex" value="female">
+            <label class="radiobutton__label" for="autoid-10"><span class="radiobutton__presentation"></span>Женщина
+            </label>
+          </div>
+          <!-- radiobutton-->
+        </div>
+        <div class="separator"> 
+          <h2 class="h2">toggle</h2>
+          <!-- toggle-->
+          <div class="toggle">
+            <input class="toggle__input" type="checkbox" id="autoid-11" name="myToggle" checked>
+            <label class="toggle__label" for="autoid-11"><span class="toggle__presentation"></span>Получать спецпредложения
+            </label>
+          </div>
+          <!-- /toggle-->
+          <!-- toggle-->
+          <div class="toggle">
+            <input class="toggle__input" type="checkbox" id="autoid-12" name="myToggle">
+            <label class="toggle__label" for="autoid-12"><span class="toggle__presentation"></span>Получать спецпредложения
+            </label>
+          </div>
+          <!-- /toggle-->
+        </div>
+        <div class="separator"> 
+          <h2 class="h2">like-button</h2>
+          <!-- like-button-->
+          <div class="like-button">
+            <input class="like-button__input" type="checkbox" id="autoid-13" name="lb">
+            <div class="like-button__background-label">
+              <label class="like-button__label" for="autoid-13">8</label>
+            </div>
+          </div>
+          <!-- /like-button-->
+          <!-- like-button-->
+          <div class="like-button">
+            <input class="like-button__input" type="checkbox" id="autoid-14" name="lb2" checked>
+            <div class="like-button__background-label">
+              <label class="like-button__label" for="autoid-14">12</label>
+            </div>
+          </div>
+          <!-- /like-button-->
+        </div>
+        <div class="separator"> 
+          <h2 class="h2">rate-button</h2>
+          <!-- rate-button-->
+          <div class="rate-button">
+            <input class="rate-button__input" type="radio" name="first-rate" value="1" id="autoid-15">
+            <label class="rate-button__label" for="autoid-15"></label>
+            <input class="rate-button__input" type="radio" name="first-rate" value="2" id="autoid-16">
+            <label class="rate-button__label" for="autoid-16"></label>
+            <input class="rate-button__input" type="radio" name="first-rate" value="3" id="autoid-17" checked>
+            <label class="rate-button__label" for="autoid-17"></label>
+            <input class="rate-button__input" type="radio" name="first-rate" value="4" id="autoid-18">
+            <label class="rate-button__label" for="autoid-18"></label>
+            <input class="rate-button__input" type="radio" name="first-rate" value="5" id="autoid-19">
+            <label class="rate-button__label" for="autoid-19"></label>
+          </div>
+          <!-- /rate-button--><!-- --> &nbsp;&nbsp;&nbsp;
+          <!-- rate-button-->
+          <div class="rate-button">
+            <input class="rate-button__input" type="radio" name="secont-rate" value="1" id="autoid-20">
+            <label class="rate-button__label" for="autoid-20"></label>
+            <input class="rate-button__input" type="radio" name="secont-rate" value="2" id="autoid-21">
+            <label class="rate-button__label" for="autoid-21"></label>
+            <input class="rate-button__input" type="radio" name="secont-rate" value="3" id="autoid-22">
+            <label class="rate-button__label" for="autoid-22"></label>
+            <input class="rate-button__input" type="radio" name="secont-rate" value="4" id="autoid-23" checked>
+            <label class="rate-button__label" for="autoid-23"></label>
+            <input class="rate-button__input" type="radio" name="secont-rate" value="5" id="autoid-24">
+            <label class="rate-button__label" for="autoid-24"></label>
+          </div>
+          <!-- /rate-button-->
+        </div>
+        <div class="separator"> 
+          <h2 class="h2">doughnun</h2>
+          <!-- doughnut-->
+          <div class="doughnut">
+            <div class="doughnut__chart"></div>
+            <!-- doughnut legend-->
+            <div class="doughnut__item" data-amount="522" data-color="#FFBA9C">
+              <div class="doughnut__mark"></div>Великолепно
+            </div>
+            <div class="doughnut__item" data-amount="261" data-color="#BC9CFF">
+              <div class="doughnut__mark"></div>Хорошо
+            </div>
+            <div class="doughnut__item" data-amount="260" data-color="#6FCF97">
+              <div class="doughnut__mark"></div>Удовлетворительно
+            </div>
+            <div class="doughnut__item" data-amount="0" data-color="#919191">
+              <div class="doughnut__mark"></div>Разочарован
+            </div>
+            <!-- /doughnut legend-->
+          </div>
+          <!-- /doughtnut-->
+        </div>
+      </div>
+      <div class="column">
+        <div class="separator"> 
+          <h2 class="h2">slider</h2>
+          <div class="slider" data-min="0" data-max="20000" data-val1="5000" data-val2="10000">
+            <div class="slider__label">text</div>
+            <input type="hidden" name="sld[0]">
+            <input type="hidden" name="sld[1]">
+            <div class="ui-slider"></div>
+          </div>
+        </div>
+        <div class="separator"> 
+          <h2 class="h2">button</h2>
+          <button class="button ui-kit-small-button" type="button">click me
+          </button>
+          <button class="button ui-kit-small-button" type="button" disabled>CLICK ME
+          </button>
+        </div>
+        <div class="separator">
+          <button class="button button_white ui-kit-small-button" type="button">CLICK ME
+          </button>
+          <button class="button button_white ui-kit-small-button" type="button" disabled="disabled">CLICK ME
+          </button>
+        </div>
+        <div class="separator">
+          <button class="button button_tiny ui-kit-small-button" type="button">click me
+          </button>
+          <button class="button button_tiny ui-kit-small-button" type="button" disabled="disabled">click me
+          </button>
+        </div>
+        <div class="separator">
+          <button class="button button_arrowed" type="button">перейти к оплате
+          </button>
+        </div>
+        <div class="separator"> 
+          <h2 class="h2">pagination</h2>
+          <ul class="pagination">
+            <li class="pagination__button"><a class="pagination__link pagination__button_prev" href="#"></a></li>
+            <li class="pagination__button"><a class="pagination__link pagination__button_cur" href="#">1</a></li>
+            <li class="pagination__button"><a class="pagination__link" href="#">2</a></li>
+            <li class="pagination__button"><a class="pagination__link" href="#">3</a></li>
+            <li class="pagination__button"><a class="pagination__link pagination__button_gap" href=""></a></li>
+            <li class="pagination__button"><a class="pagination__link" href="#">15</a></li>
+            <li class="pagination__button"><a class="pagination__link pagination__button_next" href="#"></a></li>
+            <li class="pagination__text">1-12 из 100+ вариантов аренды</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="column-holder">
+      <div class="column">
+        <div class="separator"> 
+          <h2 class="h2">expandable-control-list</h2>
+          <!-- dropdown-->
+          <div class="dropdown expandable-control-list ui-kit-expandable-control-list">
+            <input class="dropdown__show expandable-control-list__show" type="checkbox" id="autoid-25">
+            <label class="dropdown__backdrop expandable-control-list__backdrop" for="autoid-25"></label>
+            <label class="dropdown__label expandable-control-list__label" for="autoid-25">Дополнительные опции</label>
+            <!-- dropdown content-->
+            <div class="dropdown__content expandable-control-list__content">
+              <!-- checkbox-->
+              <div class="checkbox">
+                <input class="checkbox__input" type="checkbox" id="autoid-26" name="require-breakfest">
+                <label class="checkbox__label" for="autoid-26"><span class="checkbox__presentation"></span>Завтрак
+                </label>
+              </div>
+              <!-- /checkbox-->
+              <!-- checkbox-->
+              <div class="checkbox">
+                <input class="checkbox__input" type="checkbox" id="autoid-27" name="require-table">
+                <label class="checkbox__label" for="autoid-27"><span class="checkbox__presentation"></span>Письменный стол
+                </label>
+              </div>
+              <!-- /checkbox-->
+              <!-- checkbox-->
+              <div class="checkbox">
+                <input class="checkbox__input" type="checkbox" id="autoid-28" name="require-baby-table">
+                <label class="checkbox__label" for="autoid-28"><span class="checkbox__presentation"></span>Стул для кормления
+                </label>
+              </div>
+              <!-- /checkbox-->
+              <!-- checkbox-->
+              <div class="checkbox">
+                <input class="checkbox__input" type="checkbox" id="autoid-29" name="require-baby-bed">
+                <label class="checkbox__label" for="autoid-29"><span class="checkbox__presentation"></span>Кроватка
+                </label>
+              </div>
+              <!-- /checkbox-->
+              <!-- checkbox-->
+              <div class="checkbox">
+                <input class="checkbox__input" type="checkbox" id="autoid-30" name="require-tv">
+                <label class="checkbox__label" for="autoid-30"><span class="checkbox__presentation"></span>Телевизор
+                </label>
+              </div>
+              <!-- /checkbox-->
+              <!-- checkbox-->
+              <div class="checkbox">
+                <input class="checkbox__input" type="checkbox" id="autoid-31" name="require-shampoo">
+                <label class="checkbox__label" for="autoid-31"><span class="checkbox__presentation"></span>Шампунь
+                </label>
+              </div>
+              <!-- /checkbox-->
+              <!-- checkbox-->
+              <div class="checkbox">
+                <input class="checkbox__input" type="checkbox" id="autoid-32" name="require-socks">
+                <label class="checkbox__label" for="autoid-32"><span class="checkbox__presentation"></span>Носки
+                </label>
+              </div>
+              <!-- /checkbox-->
+            </div>
+            <!-- /dropdown content-->
+          </div>
+          <!-- /dropdown-->
+        </div>
+      </div>
+      <div class="column">
+        <div class="separator"> 
+          <h2 class="h2">spin</h2>
+          <!-- spin-->
+          <div class="spin">
+            <div class="spin__lable">Спальни
+            </div>
+            <div class="spin__controls">
+              <button class="spin__button spin__button_minus" type="button">&minus;</button>
+              <input class="spin__counter" type="text" value="1">
+              <button class="spin__button spin__button_plus" type="button">+</button>
+            </div>
+          </div>
+          <!-- /spin-->
+        </div>
+        <div class="separator"> 
+          <h2 class="h2">rooms-demand</h2>
+          <!-- dropdown-->
+          <div class="dropdown room-demand ui-kit-rooms-demand">
+            <input class="dropdown__show" type="checkbox" id="autoid-33">
+            <label class="dropdown__backdrop" for="autoid-33"></label>
+            <label class="dropdown__label room-demand__label" for="autoid-33">2 спальни, 2 кровати, 0 ванных комнат</label>
+            <!-- dropdown content-->
+            <div class="dropdown__content">
+              <!-- spin-->
+              <div class="spin room-demand__spin">
+                <div class="spin__lable">Спальни
+                </div>
+                <div class="spin__controls">
+                  <button class="spin__button spin__button_minus" type="button">&minus;</button>
+                  <input class="spin__counter" type="text" name="bedrooms" value="2">
+                  <button class="spin__button spin__button_plus" type="button">+</button>
+                </div>
+              </div>
+              <!-- /spin-->
+              <!-- spin-->
+              <div class="spin room-demand__spin">
+                <div class="spin__lable">Кровати
+                </div>
+                <div class="spin__controls">
+                  <button class="spin__button spin__button_minus" type="button">&minus;</button>
+                  <input class="spin__counter" type="text" name="beds" value="2">
+                  <button class="spin__button spin__button_plus" type="button">+</button>
+                </div>
+              </div>
+              <!-- /spin-->
+              <!-- spin-->
+              <div class="spin room-demand__spin">
+                <div class="spin__lable">Ванные комнаты
+                </div>
+                <div class="spin__controls">
+                  <button class="spin__button spin__button_minus" type="button">&minus;</button>
+                  <input class="spin__counter" type="text" name="bathrooms" value="0">
+                  <button class="spin__button spin__button_plus" type="button">+</button>
+                </div>
+              </div>
+              <!-- /spin-->
+            </div>
+            <!-- /dropdown content-->
+          </div>
+          <!-- /dropdown-->
+        </div>
+        <div class="separator"> 
+          <h2 class="h2">guest-counter</h2>
+          <!-- dropdown-->
+          <div class="dropdown guest-counter ui-kit-guest-counter">
+            <input class="dropdown__show" type="checkbox" id="autoid-34">
+            <label class="dropdown__backdrop" for="autoid-34"></label>
+            <label class="dropdown__label guest-counter__label" for="autoid-34">Сколько гостей</label>
+            <!-- dropdown content-->
+            <div class="dropdown__content">
+              <!-- spin-->
+              <div class="spin guest-counter__spin">
+                <div class="spin__lable">Взрослые
+                </div>
+                <div class="spin__controls">
+                  <button class="spin__button spin__button_minus" type="button">&minus;</button>
+                  <input class="spin__counter" type="text" name="adults" value="0">
+                  <button class="spin__button spin__button_plus" type="button">+</button>
+                </div>
+              </div>
+              <!-- /spin-->
+              <!-- spin-->
+              <div class="spin guest-counter__spin">
+                <div class="spin__lable">Дети
+                </div>
+                <div class="spin__controls">
+                  <button class="spin__button spin__button_minus" type="button">&minus;</button>
+                  <input class="spin__counter" type="text" name="children" value="0">
+                  <button class="spin__button spin__button_plus" type="button">+</button>
+                </div>
+              </div>
+              <!-- /spin-->
+              <!-- spin-->
+              <div class="spin guest-counter__spin">
+                <div class="spin__lable">Младенцы
+                </div>
+                <div class="spin__controls">
+                  <button class="spin__button spin__button_minus" type="button">&minus;</button>
+                  <input class="spin__counter" type="text" name="babyes" value="0">
+                  <button class="spin__button spin__button_plus" type="button">+</button>
+                </div>
+              </div>
+              <!-- /spin-->
+              <div class="guest-counter__buttons-panel">
+                <button class="button button_tiny guest-counter__clear-button" type="button">Очистить
+                </button>
+                <div class="guest-counter__strut"></div>
+                <button class="button button_tiny guest-counter__apply-button" type="button">Применить
+                </button>
+              </div>
+            </div>
+            <!-- /dropdown content-->
+          </div>
+          <!-- /dropdown-->
+        </div>
+      </div>
+      <div class="column">
+        <div class="separator"> 
+          <h2 class="h2">calendar</h2>
+          <div class="calendar">
+            <input class="calendar__result" type="hidden" name="simpleCal">
+            <div class="calendar__pane datepicker-here" data-range="true"></div>
+            <div class="calendar__button-box">
+              <button class="button button_tiny calendar__clear-button calendar__button-label_gray" type="button">Очистить
+              </button>
+              <button class="button button_tiny calendar__apply-button" type="button">Применить
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="column-holder">
+      <div class="column">
+        <div class="separator"> 
+          <h2 class="h2">feature-description</h2>
+          <div class="feature-description"><img class="feature-description__image" src="img/emoticon.svg" alt="Комфорт">
+            <div class="feature-description__header">Комфорт</div>
+            <div class="feature-description__text">Шумопоглощающие стены</div>
+          </div>
+          <div class="feature-description"><img class="feature-description__image" src="img/location_city.svg" alt="Удобство">
+            <div class="feature-description__header">Удобство</div>
+            <div class="feature-description__text">Окно в каждой из спален</div>
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <div class="separator"> 
+          <h2 class="h2">rich-checkbox</h2>
+          <!-- checkbox-->
+          <div class="checkbox rich-checkbox">
+            <input class="checkbox__input" type="checkbox" id="autoid-35" name="Wide">
+            <label class="checkbox__label rich-checkbox__checkbox-label" for="autoid-35"><span class="checkbox__presentation"></span><span class="rich-checkbox__title">Широкий коридор</span>Ширина коридора в номере не менее 91 см.
+            </label>
+          </div>
+          <!-- /checkbox-->
+          <!-- checkbox-->
+          <div class="checkbox rich-checkbox">
+            <input class="checkbox__input" type="checkbox" id="autoid-36" name="Accessebility">
+            <label class="checkbox__label rich-checkbox__checkbox-label" for="autoid-36"><span class="checkbox__presentation"></span><span class="rich-checkbox__title">Помощник для инвалидов</span>На 1 этаже вас встретит специалист и проводит до номера.
+            </label>
+          </div>
+          <!-- /checkbox-->
+        </div>
+      </div>
+      <div class="column">
+        <div class="separator"> 
+          <h2 class="h2">bullet-list</h2>
+        </div>
+        <ul class="bullet-list">
+          <li class="bullet-list__item">Нельзя с питомцами</li>
+          <li class="bullet-list__item">Без вечеринок и мероприятий</li>
+          <li class="bullet-list__item">Время прибытия &mdash; после 13:00, а выезд до 12:00</li>
+        </ul>
+      </div>
+    </div>
+    <div class="separator"> 
+      <h2 class="h2">feedback</h2>
+      <div class="feedback">
+        <div class="feedback__header"><img class="feedback__image" src="img/user-2.jpg" width="48" height="48" alt="User avatar">
+          <div class="feedback__name">Мурад Сарафанов</div>
+          <div class="feedback__date">5 дней назад</div>
+        </div>
+        <div class="feedback__body">
+          <div class="feedback__like">
+            <!-- like-button-->
+            <div class="like-button">
+              <input class="like-button__input" type="checkbox" id="autoid-37" name="lb" checked>
+              <div class="like-button__background-label">
+                <label class="like-button__label" for="autoid-37">12</label>
+              </div>
+            </div>
+            <!-- /like-button-->
+          </div>
+          <div class="feedback__text">
+            Великолепный матрас на кровати в основной спальне!
+            А пуфик вообще потрясающий.
+            И стены действительно, шумоподавляющие.
+            Выкрикивал комплименты повару &mdash; никто не жаловался из соседей.
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="column-holder">
+      <div class="column">
+        <div class="separator"> 
+          <h2 class="h2">primary-search</h2>
+          <div class="primary-search">
+            <form>
+              <div class="h1 primary-search__heading">Найдём номера под ваши пожелания</div>
+              <div class="primary-search__in-out-labels">
+                <div class="h3 primary-search__in-label">Прибытие</div>
+                <div class="primary-search__stub"></div>
+                <div class="h3 primary-search__out-label">Выезд</div>
+              </div>
+              <!-- double-date-dropdown-->
+              <div class="double-date-dropdown primary-search__double-date-dropdown">
+                <div class="double-date-dropdown__from-field">
+                  <!-- dropdown-->
+                  <div class="dropdown date-dropdown">
+                    <input class="dropdown__show date-dropdown__trigger" type="checkbox" id="autoid-38">
+                    <label class="dropdown__backdrop" for="autoid-38"></label>
+                    <label class="dropdown__label date-dropdown__label" for="autoid-38">ДД.ММ.ГГГГ</label>
+                    <!-- dropdown content-->
+                    <div class="dropdown__content date-dropdown__content">
+                      <div class="calendar">
+                        <input class="calendar__result" type="hidden" name="searchcdates[0]">
+                        <div class="calendar__pane datepicker-here"></div>
+                        <div class="calendar__button-box">
+                          <button class="button button_tiny calendar__clear-button calendar__button-label_gray" type="button">Очистить
+                          </button>
+                          <button class="button button_tiny calendar__apply-button" type="button">Применить
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- /dropdown content-->
+                  </div>
+                  <!-- /dropdown-->
+                </div>
+                <div class="double-date-dropdown__strut"></div>
+                <div class="double-date-dropdown__to-field">
+                  <!-- dropdown-->
+                  <div class="dropdown date-dropdown">
+                    <input class="dropdown__show date-dropdown__trigger" type="checkbox" id="autoid-39">
+                    <label class="dropdown__backdrop" for="autoid-39"></label>
+                    <label class="dropdown__label date-dropdown__label" for="autoid-39">ДД.ММ.ГГГГ</label>
+                    <!-- dropdown content-->
+                    <div class="dropdown__content date-dropdown__content">
+                      <div class="calendar">
+                        <input class="calendar__result" type="hidden" name="searchcdates[1]">
+                        <div class="calendar__pane datepicker-here"></div>
+                        <div class="calendar__button-box">
+                          <button class="button button_tiny calendar__clear-button calendar__button-label_gray" type="button">Очистить
+                          </button>
+                          <button class="button button_tiny calendar__apply-button" type="button">Применить
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- /dropdown content-->
+                  </div>
+                  <!-- /dropdown-->
+                </div>
+              </div>
+              <!-- /double-date-dropdown-->
+              <div class="h3 primary-search__guest-label">Гости</div>
+              <!-- dropdown-->
+              <div class="dropdown guest-counter primary-search__guest-counter">
+                <input class="dropdown__show" type="checkbox" id="autoid-40">
+                <label class="dropdown__backdrop" for="autoid-40"></label>
+                <label class="dropdown__label guest-counter__label" for="autoid-40">Сколько гостей</label>
+                <!-- dropdown content-->
+                <div class="dropdown__content">
+                  <!-- spin-->
+                  <div class="spin guest-counter__spin">
+                    <div class="spin__lable">Взрослые
+                    </div>
+                    <div class="spin__controls">
+                      <button class="spin__button spin__button_minus" type="button">&minus;</button>
+                      <input class="spin__counter" type="text" name="adults" value="0">
+                      <button class="spin__button spin__button_plus" type="button">+</button>
+                    </div>
+                  </div>
+                  <!-- /spin-->
+                  <!-- spin-->
+                  <div class="spin guest-counter__spin">
+                    <div class="spin__lable">Дети
+                    </div>
+                    <div class="spin__controls">
+                      <button class="spin__button spin__button_minus" type="button">&minus;</button>
+                      <input class="spin__counter" type="text" name="children" value="0">
+                      <button class="spin__button spin__button_plus" type="button">+</button>
+                    </div>
+                  </div>
+                  <!-- /spin-->
+                  <!-- spin-->
+                  <div class="spin guest-counter__spin">
+                    <div class="spin__lable">Младенцы
+                    </div>
+                    <div class="spin__controls">
+                      <button class="spin__button spin__button_minus" type="button">&minus;</button>
+                      <input class="spin__counter" type="text" name="babyes" value="0">
+                      <button class="spin__button spin__button_plus" type="button">+</button>
+                    </div>
+                  </div>
+                  <!-- /spin-->
+                  <div class="guest-counter__buttons-panel">
+                    <button class="button button_tiny guest-counter__clear-button" type="button">Очистить
+                    </button>
+                    <div class="guest-counter__strut"></div>
+                    <button class="button button_tiny guest-counter__apply-button" type="button">Применить
+                    </button>
+                  </div>
+                </div>
+                <!-- /dropdown content-->
+              </div>
+              <!-- /dropdown-->
+              <button class="button button_arrowed primary-search__button" type="submit">Подобрать номер
+              </button>
+            </form>
+          </div>
+        </div>
+        <div class="separator"> 
+          <h2 class="h2">account-registration</h2>
+          <div class="account-registration">
+            <form>
+              <div class="h1 account-registration__heading">Регистрация аккаунта</div>
+              <input class="text-field account-registration__first-name" name="firstname" type="text" placeholder="Имя">
+              <input class="text-field account-registration__last-name" name="secondname" type="text" placeholder="Фамилия">
+              <div class="account-registration__radio-wrapper">
+                <!-- radiobutton-->
+                <div class="radiobutton">
+                  <input class="radiobutton__input" type="radio" id="autoid-41" name="sex" value="male" checked>
+                  <label class="radiobutton__label" for="autoid-41"><span class="radiobutton__presentation"></span>Мужчина
+                  </label>
+                </div>
+                <!-- radiobutton-->
+              </div>
+              <div class="account-registration__radio-wrapper">
+                <!-- radiobutton-->
+                <div class="radiobutton">
+                  <input class="radiobutton__input" type="radio" id="autoid-42" name="sex" value="female">
+                  <label class="radiobutton__label" for="autoid-42"><span class="radiobutton__presentation"></span>Женщина
+                  </label>
+                </div>
+                <!-- radiobutton-->
+              </div>
+              <div class="h3 account-registration__birthday-label">Дата рождения</div>
+              <input class="text-field date-text-field account-registration__birthday-field" name="birthdayDate" type="text" placeholder="ДД.ММ.ГГГГ" spellcheck="false" data-inputmask="'alias': 'datetime', 'inputFormat': 'dd.mm.yyyy', 'placeholder': 'ДД.ММ.ГГГГ'">
+              <div class="h3 account-registration__login-data_label">Данные для входа в сервис</div>
+              <input class="text-field account-registration__email-field" name="email" type="email" placeholder="Email">
+              <input class="text-field account-registration__password-field" name="password" type="password" placeholder="Пароль">
+              <!-- toggle-->
+              <div class="toggle">
+                <input class="toggle__input" type="checkbox" id="autoid-43" name="recievoffers">
+                <label class="toggle__label" for="autoid-43"><span class="toggle__presentation"></span>Получать спецпредложения
+                </label>
+              </div>
+              <!-- /toggle-->
+              <button class="button button_arrowed account-registration__go-to-pay-button" type="submit">Перейти к оплате
+              </button>
+              <div class="account-registration__to-login">
+                <div class="account-registration__to-login-text text">Уже есть аккаунт на Toxin</div>
+                <button class="button button_white account-registration__enter-button" type="button">Войти
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <div class="separator"> 
+          <h2 class="h2">room-booking</h2>
+          <div class="room-booking">
+            <form>
+              <div class="room-booking__header-row clearfix"><span class="room-booking__header-row-left-side"><span class="room-booking__number-sign">№</span><span class="room-booking__room-no"> 888 </span><span class="room-booking__room-rank">люкс</span></span><span class="room-booking__header-row-right-side"><span class="room-booking__price-rubles">9 990₽ </span><span class="room-booking__price-period">в сутки</span></span></div>
+              <div class="room-booking__in-out-lables">
+                <div class="h3 room-booking__in-label">Прибытие</div>
+                <div class="room-booking__stub"></div>
+                <div class="h3 room-booking__out-label">Выезд</div>
+              </div>
+              <!-- double-date-dropdown-->
+              <div class="double-date-dropdown room-booking__double-date-dropdown">
+                <div class="double-date-dropdown__from-field">
+                  <!-- dropdown-->
+                  <div class="dropdown date-dropdown">
+                    <input class="dropdown__show date-dropdown__trigger" type="checkbox" id="autoid-44">
+                    <label class="dropdown__backdrop" for="autoid-44"></label>
+                    <label class="dropdown__label date-dropdown__label" for="autoid-44">20.08.2019</label>
+                    <!-- dropdown content-->
+                    <div class="dropdown__content date-dropdown__content">
+                      <div class="calendar">
+                        <input class="calendar__result" type="hidden" name="inoutdate[0]">
+                        <div class="calendar__pane datepicker-here"></div>
+                        <div class="calendar__button-box">
+                          <button class="button button_tiny calendar__clear-button calendar__button-label_gray" type="button">Очистить
+                          </button>
+                          <button class="button button_tiny calendar__apply-button" type="button">Применить
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- /dropdown content-->
+                  </div>
+                  <!-- /dropdown-->
+                </div>
+                <div class="double-date-dropdown__strut"></div>
+                <div class="double-date-dropdown__to-field">
+                  <!-- dropdown-->
+                  <div class="dropdown date-dropdown">
+                    <input class="dropdown__show date-dropdown__trigger" type="checkbox" id="autoid-45">
+                    <label class="dropdown__backdrop" for="autoid-45"></label>
+                    <label class="dropdown__label date-dropdown__label" for="autoid-45">24.08.2019</label>
+                    <!-- dropdown content-->
+                    <div class="dropdown__content date-dropdown__content">
+                      <div class="calendar">
+                        <input class="calendar__result" type="hidden" name="inoutdate[1]">
+                        <div class="calendar__pane datepicker-here"></div>
+                        <div class="calendar__button-box">
+                          <button class="button button_tiny calendar__clear-button calendar__button-label_gray" type="button">Очистить
+                          </button>
+                          <button class="button button_tiny calendar__apply-button" type="button">Применить
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- /dropdown content-->
+                  </div>
+                  <!-- /dropdown-->
+                </div>
+              </div>
+              <!-- /double-date-dropdown-->
+              <div class="h3 room-booking__guest-label">Гости</div>
+              <!-- dropdown-->
+              <div class="dropdown guest-counter room-booking__guest-counter">
+                <input class="dropdown__show" type="checkbox" id="autoid-46">
+                <label class="dropdown__backdrop" for="autoid-46"></label>
+                <label class="dropdown__label guest-counter__label" for="autoid-46">Сколько гостей</label>
+                <!-- dropdown content-->
+                <div class="dropdown__content">
+                  <!-- spin-->
+                  <div class="spin guest-counter__spin">
+                    <div class="spin__lable">Взрослые
+                    </div>
+                    <div class="spin__controls">
+                      <button class="spin__button spin__button_minus" type="button">&minus;</button>
+                      <input class="spin__counter" type="text" name="adults" value="0">
+                      <button class="spin__button spin__button_plus" type="button">+</button>
+                    </div>
+                  </div>
+                  <!-- /spin-->
+                  <!-- spin-->
+                  <div class="spin guest-counter__spin">
+                    <div class="spin__lable">Дети
+                    </div>
+                    <div class="spin__controls">
+                      <button class="spin__button spin__button_minus" type="button">&minus;</button>
+                      <input class="spin__counter" type="text" name="children" value="0">
+                      <button class="spin__button spin__button_plus" type="button">+</button>
+                    </div>
+                  </div>
+                  <!-- /spin-->
+                  <!-- spin-->
+                  <div class="spin guest-counter__spin">
+                    <div class="spin__lable">Младенцы
+                    </div>
+                    <div class="spin__controls">
+                      <button class="spin__button spin__button_minus" type="button">&minus;</button>
+                      <input class="spin__counter" type="text" name="babyes" value="0">
+                      <button class="spin__button spin__button_plus" type="button">+</button>
+                    </div>
+                  </div>
+                  <!-- /spin-->
+                  <div class="guest-counter__buttons-panel">
+                    <button class="button button_tiny guest-counter__clear-button" type="button">Очистить
+                    </button>
+                    <div class="guest-counter__strut"></div>
+                    <button class="button button_tiny guest-counter__apply-button" type="button">Применить
+                    </button>
+                  </div>
+                </div>
+                <!-- /dropdown content-->
+              </div>
+              <!-- /dropdown-->
+              <div class="room-booking__info-block">
+                <div class="room-booking__info-row">
+                  <div class="room-booking__col-1"><span class="room-booking__cost-calculation">9 900₽ × 4 суток</span></div>
+                  <div class="room-booking__col-2"></div>
+                  <div class="room-booking__col-3"><span class="room-booking__cost-calculated">39960₽</span></div>
+                </div>
+                <div class="room-booking__info-row">
+                  <div class="room-booking__col-1"><span class="room-booking__cost-provize">Сбор за услуги: скидка 2 179₽</span></div>
+                  <div class="room-booking__col-2"><a class="room-booking__info-button" href="#"></a></div>
+                  <div class="room-booking__col-3"><span class="room-booking__cost-calculated">0₽</span></div>
+                </div>
+                <div class="room-booking__info-row">
+                  <div class="room-booking__col-1"><span class="room-booking__cost-calculation">Сбор за дополнительные услуги</span></div>
+                  <div class="room-booking__col-2"><a class="room-booking__info-button" href="#"></a></div>
+                  <div class="room-booking__col-3"><span class="room-booking__cost-calculated">300₽</span></div>
+                </div>
+              </div>
+              <div class="room-booking__total-row">
+                <div class="room-booking__total-row-title">Итого</div>
+                <div class="room-booking__total-row-line"></div>
+                <div class="room-booking__total-row-total">38 081₽</div>
+              </div>
+              <button class="button button_arrowed room-booking__button" type="submit">Забронировать
+              </button>
+            </form>
+          </div>
+        </div>
+        <div class="separator"> 
+          <h2 class="h2">login</h2>
+          <div class="login">
+            <form>
+              <div class="h1 login__heading">Войти</div>
+              <input class="text-field login__email-field" name="email" type="text" placeholder="Email">
+              <input class="text-field login__password-field" name="password" type="password" placeholder="Пароль">
+              <button class="button button_arrowed login__enter" type="submit">Войти
+              </button>
+              <div class="login__to-create-account">
+                <div class="login__to-create-account-text text">Нет аккаунта на Toxin?</div>
+                <button class="button button_white login__create-account-button" type="button">Создать
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="separator"> 
+          <h2 class="h2">toxin-logo</h2><a class="toxin-logo" href="#"></a>
+        </div>
+      </div>
+      <div class="column"> 
+        <div class="separator"> 
+          <h2 class="h2">image-slider</h2>
+          <!-- carousel-->
+          <div class="image-slider gallery"><img class="gallery-item" src="img/1.png" alt="slider image"><img class="gallery-item" src="img/2.png" alt="slider image"><img class="gallery-item" src="img/3.png" alt="slider image"><img class="gallery-item" src="img/4.png" alt="slider image">
+          </div>
+          <!-- /carousel-->
+        </div>
+        <div class="separator"> 
+          <h2 class="h2">room-card</h2>
+          <div class="room-card ui-kit-room-card">
+            <!-- carousel-->
+            <div class="image-slider gallery"><img class="gallery-item" src="img/1.png" alt="slider image"><img class="gallery-item" src="img/2.png" alt="slider image"><img class="gallery-item" src="img/3.png" alt="slider image"><img class="gallery-item" src="img/4.png" alt="slider image">
+            </div>
+            <!-- /carousel--><a class="room-card__num-row" href="#">
+              <div class="room-card__number-column">
+                <div class="room-card__number-sign">№</div>
+                <div class="room-card__number text">886</div>
+                <div class="room-card__number-rank">Люкс</div>
+              </div>
+              <div class="room-card__price-column">
+                <div class="room-card__price">9 990 ₽</div>
+                <div class="room-card__price-period">в сутки</div>
+              </div></a>
+            <hr class="room-card__separator">
+            <div class="room-card__feedback-row">
+              <!-- rate-button-->
+              <div class="rate-button">
+                <input class="rate-button__input" type="radio" name="rate886" value="1" id="autoid-47">
+                <label class="rate-button__label" for="autoid-47"></label>
+                <input class="rate-button__input" type="radio" name="rate886" value="2" id="autoid-48">
+                <label class="rate-button__label" for="autoid-48"></label>
+                <input class="rate-button__input" type="radio" name="rate886" value="3" id="autoid-49">
+                <label class="rate-button__label" for="autoid-49"></label>
+                <input class="rate-button__input" type="radio" name="rate886" value="4" id="autoid-50" checked>
+                <label class="rate-button__label" for="autoid-50"></label>
+                <input class="rate-button__input" type="radio" name="rate886" value="5" id="autoid-51">
+                <label class="rate-button__label" for="autoid-51"></label>
+              </div>
+              <!-- /rate-button--><a class="room-card__feedback-col" href="#">
+                <div class="room-card__feedback-num">65</div>
+                <div class="room-card__feedback-unit">Отзывов</div></a>
+            </div>
+          </div>
+        </div>
+        <div class="separator"> 
+          <h2 class="h2">search-panel</h2>
+          <div class="search-panel">
+            <form>
+              <h3 class="h3">Даты пребывания в отеле</h3>
+              <!-- dropdown-->
+              <div class="dropdown date-range-dropdown search-panel__date-range-dropdown">
+                <input class="dropdown__show date-range-dropdown__trigger" type="checkbox" id="autoid-52">
+                <label class="dropdown__backdrop" for="autoid-52"></label>
+                <label class="dropdown__label date-range-dropdown__label" for="autoid-52">Выберите даты</label>
+                <!-- dropdown content-->
+                <div class="dropdown__content date-range-dropdown__content">
+                  <div class="calendar">
+                    <input class="calendar__result" type="hidden" name="daterange">
+                    <div class="calendar__pane datepicker-here" data-range="true" data-date-format="dd M" data-multiple-dates-separator=" - "></div>
+                    <div class="calendar__button-box">
+                      <button class="button button_tiny calendar__clear-button calendar__button-label_gray" type="button">Очистить
+                      </button>
+                      <button class="button button_tiny calendar__apply-button" type="button">Применить
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <!-- /dropdown content-->
+              </div>
+              <!-- /dropdown-->
+              <h3 class="h3">Гости</h3>
+              <!-- dropdown-->
+              <div class="dropdown guest-counter search-panel__guest-counter">
+                <input class="dropdown__show" type="checkbox" id="autoid-53">
+                <label class="dropdown__backdrop" for="autoid-53"></label>
+                <label class="dropdown__label guest-counter__label" for="autoid-53">3 гостя, один младенец</label>
+                <!-- dropdown content-->
+                <div class="dropdown__content">
+                  <!-- spin-->
+                  <div class="spin guest-counter__spin">
+                    <div class="spin__lable">Взрослые
+                    </div>
+                    <div class="spin__controls">
+                      <button class="spin__button spin__button_minus" type="button">&minus;</button>
+                      <input class="spin__counter" type="text" name="adults" value="3">
+                      <button class="spin__button spin__button_plus" type="button">+</button>
+                    </div>
+                  </div>
+                  <!-- /spin-->
+                  <!-- spin-->
+                  <div class="spin guest-counter__spin">
+                    <div class="spin__lable">Дети
+                    </div>
+                    <div class="spin__controls">
+                      <button class="spin__button spin__button_minus" type="button">&minus;</button>
+                      <input class="spin__counter" type="text" name="children" value="0">
+                      <button class="spin__button spin__button_plus" type="button">+</button>
+                    </div>
+                  </div>
+                  <!-- /spin-->
+                  <!-- spin-->
+                  <div class="spin guest-counter__spin">
+                    <div class="spin__lable">Младенцы
+                    </div>
+                    <div class="spin__controls">
+                      <button class="spin__button spin__button_minus" type="button">&minus;</button>
+                      <input class="spin__counter" type="text" name="babyes" value="1">
+                      <button class="spin__button spin__button_plus" type="button">+</button>
+                    </div>
+                  </div>
+                  <!-- /spin-->
+                  <div class="guest-counter__buttons-panel">
+                    <button class="button button_tiny guest-counter__clear-button" type="button">Очистить
+                    </button>
+                    <div class="guest-counter__strut"></div>
+                    <button class="button button_tiny guest-counter__apply-button" type="button">Применить
+                    </button>
+                  </div>
+                </div>
+                <!-- /dropdown content-->
+              </div>
+              <!-- /dropdown-->
+              <h3 class="h3">Диапазон цены</h3>
+              <div class="search-panel__slider-wrapper">
+                <div class="slider" data-min="0" data-max="15000" data-val1="5000" data-val2="10000">
+                  <div class="slider__label">text</div>
+                  <input type="hidden" name="pricerange[0]">
+                  <input type="hidden" name="pricerange[1]">
+                  <div class="ui-slider"></div>
+                </div>
+              </div>
+              <div class="text search-panel__text">Стоимость за сутки пребывания в номере</div>
+              <h3 class="h3">Дополнительные возможности</h3>
+              <div class="search-panel__checkboxes-wrapper">
+                <!-- checkbox-->
+                <div class="checkbox">
+                  <input class="checkbox__input" type="checkbox" id="autoid-54" name="smoke-aval" disabled>
+                  <label class="checkbox__label" for="autoid-54"><span class="checkbox__presentation"></span>Можно курить
+                  </label>
+                </div>
+                <!-- /checkbox-->
+                <!-- checkbox-->
+                <div class="checkbox">
+                  <input class="checkbox__input" type="checkbox" id="autoid-55" name="pets-aval" checked>
+                  <label class="checkbox__label" for="autoid-55"><span class="checkbox__presentation"></span>Можно с питомцами
+                  </label>
+                </div>
+                <!-- /checkbox-->
+                <!-- checkbox-->
+                <div class="checkbox">
+                  <input class="checkbox__input" type="checkbox" id="autoid-56" name="guests-aval" checked>
+                  <label class="checkbox__label" for="autoid-56"><span class="checkbox__presentation"></span>Можно пригласить гостей<br>(до 10 человек)
+                  </label>
+                </div>
+                <!-- /checkbox-->
+              </div>
+              <h3 class="h3">Доступность</h3>
+              <div class="search-panel__accessebility-wrapper">
+                <!-- checkbox-->
+                <div class="checkbox rich-checkbox search-panel__rich-cb">
+                  <input class="checkbox__input" type="checkbox" id="autoid-57" name="wide">
+                  <label class="checkbox__label rich-checkbox__checkbox-label" for="autoid-57"><span class="checkbox__presentation"></span><span class="rich-checkbox__title">Широкий коридор</span>Ширина коридора в номере не менее 91 см.
+                  </label>
+                </div>
+                <!-- /checkbox-->
+                <!-- checkbox-->
+                <div class="checkbox rich-checkbox search-panel__rich-cb">
+                  <input class="checkbox__input" type="checkbox" id="autoid-58" name="accessebility">
+                  <label class="checkbox__label rich-checkbox__checkbox-label" for="autoid-58"><span class="checkbox__presentation"></span><span class="rich-checkbox__title">Помощник для инвалидов</span>На 1 этаже вас встретит специалист и проводит до номера.
+                  </label>
+                </div>
+                <!-- /checkbox-->
+              </div>
+              <h3 class="h3">Удобства номера</h3>
+              <!-- dropdown-->
+              <div class="dropdown room-demand search-panel__rooms-demand">
+                <input class="dropdown__show" type="checkbox" id="autoid-59">
+                <label class="dropdown__backdrop" for="autoid-59"></label>
+                <label class="dropdown__label room-demand__label" for="autoid-59">2 спальни, 2 кровати, 0 ванных комнат</label>
+                <!-- dropdown content-->
+                <div class="dropdown__content">
+                  <!-- spin-->
+                  <div class="spin room-demand__spin">
+                    <div class="spin__lable">Спальни
+                    </div>
+                    <div class="spin__controls">
+                      <button class="spin__button spin__button_minus" type="button">&minus;</button>
+                      <input class="spin__counter" type="text" name="bedrooms" value="2">
+                      <button class="spin__button spin__button_plus" type="button">+</button>
+                    </div>
+                  </div>
+                  <!-- /spin-->
+                  <!-- spin-->
+                  <div class="spin room-demand__spin">
+                    <div class="spin__lable">Кровати
+                    </div>
+                    <div class="spin__controls">
+                      <button class="spin__button spin__button_minus" type="button">&minus;</button>
+                      <input class="spin__counter" type="text" name="beds" value="2">
+                      <button class="spin__button spin__button_plus" type="button">+</button>
+                    </div>
+                  </div>
+                  <!-- /spin-->
+                  <!-- spin-->
+                  <div class="spin room-demand__spin">
+                    <div class="spin__lable">Ванные комнаты
+                    </div>
+                    <div class="spin__controls">
+                      <button class="spin__button spin__button_minus" type="button">&minus;</button>
+                      <input class="spin__counter" type="text" name="bathrooms" value="0">
+                      <button class="spin__button spin__button_plus" type="button">+</button>
+                    </div>
+                  </div>
+                  <!-- /spin-->
+                </div>
+                <!-- /dropdown content-->
+              </div>
+              <!-- /dropdown-->
+              <!-- dropdown-->
+              <div class="dropdown expandable-control-list search-panel__expandable-control-list">
+                <input class="dropdown__show expandable-control-list__show" type="checkbox" id="autoid-60">
+                <label class="dropdown__backdrop expandable-control-list__backdrop" for="autoid-60"></label>
+                <label class="dropdown__label expandable-control-list__label" for="autoid-60">Дополнительные удобства</label>
+                <!-- dropdown content-->
+                <div class="dropdown__content expandable-control-list__content">
+                  <!-- checkbox-->
+                  <div class="checkbox">
+                    <input class="checkbox__input" type="checkbox" id="autoid-61" name="require-breakfest">
+                    <label class="checkbox__label" for="autoid-61"><span class="checkbox__presentation"></span>Завтрак
+                    </label>
+                  </div>
+                  <!-- /checkbox-->
+                  <!-- checkbox-->
+                  <div class="checkbox">
+                    <input class="checkbox__input" type="checkbox" id="autoid-62" name="require-table" checked>
+                    <label class="checkbox__label" for="autoid-62"><span class="checkbox__presentation"></span>Письменный стол
+                    </label>
+                  </div>
+                  <!-- /checkbox-->
+                  <!-- checkbox-->
+                  <div class="checkbox">
+                    <input class="checkbox__input" type="checkbox" id="autoid-63" name="require-baby-table" checked>
+                    <label class="checkbox__label" for="autoid-63"><span class="checkbox__presentation"></span>Стул для кормления
+                    </label>
+                  </div>
+                  <!-- /checkbox-->
+                  <!-- checkbox-->
+                  <div class="checkbox">
+                    <input class="checkbox__input" type="checkbox" id="autoid-64" name="require-baby-bed" checked>
+                    <label class="checkbox__label" for="autoid-64"><span class="checkbox__presentation"></span>Кроватка
+                    </label>
+                  </div>
+                  <!-- /checkbox-->
+                  <!-- checkbox-->
+                  <div class="checkbox">
+                    <input class="checkbox__input" type="checkbox" id="autoid-65" name="require-tv">
+                    <label class="checkbox__label" for="autoid-65"><span class="checkbox__presentation"></span>Телевизор
+                    </label>
+                  </div>
+                  <!-- /checkbox-->
+                  <!-- checkbox-->
+                  <div class="checkbox">
+                    <input class="checkbox__input" type="checkbox" id="autoid-66" name="require-shampoo">
+                    <label class="checkbox__label" for="autoid-66"><span class="checkbox__presentation"></span>Шампунь
+                    </label>
+                  </div>
+                  <!-- /checkbox-->
+                  <!-- checkbox-->
+                  <div class="checkbox">
+                    <input class="checkbox__input" type="checkbox" id="autoid-67" name="require-socks">
+                    <label class="checkbox__label" for="autoid-67"><span class="checkbox__presentation"></span>Носки
+                    </label>
+                  </div>
+                  <!-- /checkbox-->
+                  <!-- checkbox-->
+                  <div class="checkbox">
+                    <input class="checkbox__input" type="checkbox" id="autoid-68" name="require-clocks">
+                    <label class="checkbox__label" for="autoid-68"><span class="checkbox__presentation"></span>Часы
+                    </label>
+                  </div>
+                  <!-- /checkbox-->
+                </div>
+                <!-- /dropdown content-->
+              </div>
+              <!-- /dropdown-->
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="wide-column">
+      <div class="separator"> 
+        <h2 class="h2">main-menu</h2>
+        <nav class="horizontal-menu"><a class="toxin-logo horizontal-menu__logo" href="#"></a>
+          <button class="horizontal-menu__toggle-view" type="button"><span class="horizontal-menu__hr"></span><span class="horizontal-menu__hr"></span><span class="horizontal-menu__hr"></span></button>
+          <ul class="horizontal-menu__main-list">
+            <li class="horizontal-menu__item horizontal-menu__item_current"><a class="horizontal-menu__link" href="#">О нас</a></li>
+            <li class="horizontal-menu__item horizontal-menu__item_dropdown"><a class="horizontal-menu__link" href="#">Услуги</a>
+              <ul class="horizontal-menu__submenu-list horizontal-menu__submenu-list_position_center">
+                <li class="horizontal-menu__submenu-list-item"><a class="horizontal-menu__submenu-link" href="#">Парим</a></li>
+                <li class="horizontal-menu__submenu-list-item"><a class="horizontal-menu__submenu-link" href="#">Варим</a></li>
+                <li class="horizontal-menu__submenu-list-item"><a class="horizontal-menu__submenu-link" href="#">Жарим </a></li>
+              </ul>
+            </li>
+            <li class="horizontal-menu__item"><a class="horizontal-menu__link" href="#">Вакансии</a></li>
+            <li class="horizontal-menu__item"><a class="horizontal-menu__link" href="#">Новости</a></li>
+            <li class="horizontal-menu__item horizontal-menu__item_dropdown"><a class="horizontal-menu__link" href="#">Соглашения</a>
+              <ul class="horizontal-menu__submenu-list horizontal-menu__submenu-list_position_center">
+                <li class="horizontal-menu__submenu-list-item"><a class="horizontal-menu__submenu-link" href="#">Об уплате алиментов</a></li>
+                <li class="horizontal-menu__submenu-list-item"><a class="horizontal-menu__submenu-link" href="#">О расторжении договора</a></li>
+                <li class="horizontal-menu__submenu-list-item"><a class="horizontal-menu__submenu-link" href="#">О разделе имущества</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="separator"> 
+        <h2 class="h2">main-menu with buttons</h2>
+        <nav class="horizontal-menu"><a class="toxin-logo horizontal-menu__logo" href="#"></a>
+          <button class="horizontal-menu__toggle-view" type="button"><span class="horizontal-menu__hr"></span><span class="horizontal-menu__hr"></span><span class="horizontal-menu__hr"></span></button>
+          <ul class="horizontal-menu__main-list">
+            <li class="horizontal-menu__item horizontal-menu__item_current"><a class="horizontal-menu__link" href="#">О нас</a></li>
+            <li class="horizontal-menu__item horizontal-menu__item_dropdown"><a class="horizontal-menu__link" href="#">Услуги</a>
+              <ul class="horizontal-menu__submenu-list horizontal-menu__submenu-list_position_center">
+                <li class="horizontal-menu__submenu-list-item"><a class="horizontal-menu__submenu-link" href="#">Парим</a></li>
+                <li class="horizontal-menu__submenu-list-item"><a class="horizontal-menu__submenu-link" href="#">Варим</a></li>
+                <li class="horizontal-menu__submenu-list-item"><a class="horizontal-menu__submenu-link" href="#">Жарим </a></li>
+              </ul>
+            </li>
+            <li class="horizontal-menu__item"><a class="horizontal-menu__link" href="#">Вакансии</a></li>
+            <li class="horizontal-menu__item"><a class="horizontal-menu__link" href="#">Новости</a></li>
+            <li class="horizontal-menu__item horizontal-menu__item_dropdown"><a class="horizontal-menu__link" href="#">Соглашения</a>
+              <ul class="horizontal-menu__submenu-list horizontal-menu__submenu-list_position_center">
+                <li class="horizontal-menu__submenu-list-item"><a class="horizontal-menu__submenu-link" href="#">Об уплате алиментов</a></li>
+                <li class="horizontal-menu__submenu-list-item"><a class="horizontal-menu__submenu-link" href="#">О расторжении договора</a></li>
+                <li class="horizontal-menu__submenu-list-item"><a class="horizontal-menu__submenu-link" href="#">О разделе имущества</a></li>
+              </ul>
+            </li>
+            <li class="horizontal-menu__item">
+              <button class="button horizontal-menu__enter-button button_white" type="button">Войти
+              </button>
+            </li>
+            <li class="horizontal-menu__item">
+              <button class="button horizontal-menu__register-button" type="button">Зарегистрироваться
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="separator"> 
+        <h2 class="h2">big-footer</h2>
+        <footer class="big-footer">
+          <div class="big-footer__body">
+            <div class="big-footer__common-info"><a class="toxin-logo big-footer__logo" href="#"></a>
+              <div class="big-footer__common-info-text">Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»</div>
+            </div>
+            <div class="big-footer__links">
+              <h3 class="h3 big-footer__h3">Навигация</h3><a class="big-footer__link" href="#">О нас</a><a class="big-footer__link" href="#">Новости</a><a class="big-footer__link" href="#">Служба поддержки</a><a class="big-footer__link" href="#">Услуги</a>
+            </div>
+            <div class="big-footer__links">
+              <h3 class="h3 big-footer__h3">О нас</h3><a class="big-footer__link" href="#">О сервисе</a><a class="big-footer__link" href="#">Наша команда</a><a class="big-footer__link" href="#">Вакансии</a><a class="big-footer__link" href="#">Инвесторы       </a>
+            </div>
+            <div class="big-footer__links">
+              <h3 class="h3 big-footer__h3">Служба поддержки</h3><a class="big-footer__link" href="#">Соглашения</a><a class="big-footer__link" href="#">Сообщества</a><a class="big-footer__link" href="#">Связь с нами</a>
+            </div>
+            <div class="big-footer__subscribe">
+              <h3 class="h3 big-footer__h3">Подписка</h3>
+              <div class="big-footer__subscribe-text">Получайте специальные предложения и новости сервиса</div>
+              <!-- subscription-text-field-->
+              <div class="subscription-text-field big-footer__subscription-text-field">
+                <input class="text-field subscription-text-field__text" name="feedback" type="text" placeholder="Email">
+                <button class="subscription-text-field__button" type="button" onclick="alert('ok')"></button>
+              </div>
+              <!-- /subscription-text-field-->
+            </div>
+          </div>
+          <div class="big-footer__footer">
+            <div class="big-footer__footer-text">Copyright © 2018 Toxin отель. Все права защищены.</div>
+            <div class="big-footer__footer-socials"><a class="social-button social-button_twitter" href="#"></a><a class="social-button social-button_facebook" href="#"></a><a class="social-button social-button_instagram" href="#"></a></div>
+          </div>
+        </footer>
+      </div>
+      <div class="separator"> 
+        <h2 class="h2">small footer</h2>
+        <footer class="small-footer"><a class="toxin-logo small-footer__logo" href="#"></a>
+          <div class="small-footer__text">Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»</div>
+          <div class="small-footer__footer-socials"><a class="social-button social-button_twitter" href="#"></a><a class="social-button social-button_facebook" href="#"></a><a class="social-button social-button_instagram" href="#"></a></div>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>

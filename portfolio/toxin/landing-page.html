@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Toxin</title>
+    <script src="index.js"></script>
+    <link href="index.css" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+  </head>
+  <body class="landing-page">
+    <nav class="horizontal-menu"><a class="toxin-logo horizontal-menu__logo" href="#"></a>
+      <button class="horizontal-menu__toggle-view" type="button"><span class="horizontal-menu__hr"></span><span class="horizontal-menu__hr"></span><span class="horizontal-menu__hr"></span></button>
+      <ul class="horizontal-menu__main-list">
+        <li class="horizontal-menu__item horizontal-menu__item_current"><a class="horizontal-menu__link" href="#">О нас</a></li>
+        <li class="horizontal-menu__item horizontal-menu__item_dropdown"><a class="horizontal-menu__link" href="#">Услуги</a>
+          <ul class="horizontal-menu__submenu-list horizontal-menu__submenu-list_position_center">
+            <li class="horizontal-menu__submenu-list-item"><a class="horizontal-menu__submenu-link" href="#">Парим</a></li>
+            <li class="horizontal-menu__submenu-list-item"><a class="horizontal-menu__submenu-link" href="#">Варим</a></li>
+            <li class="horizontal-menu__submenu-list-item"><a class="horizontal-menu__submenu-link" href="#">Жарим </a></li>
+          </ul>
+        </li>
+        <li class="horizontal-menu__item"><a class="horizontal-menu__link" href="#">Вакансии</a></li>
+        <li class="horizontal-menu__item"><a class="horizontal-menu__link" href="#">Новости</a></li>
+        <li class="horizontal-menu__item horizontal-menu__item_dropdown"><a class="horizontal-menu__link" href="#">Соглашения</a>
+          <ul class="horizontal-menu__submenu-list horizontal-menu__submenu-list_position_center">
+            <li class="horizontal-menu__submenu-list-item"><a class="horizontal-menu__submenu-link" href="#">Об уплате алиментов</a></li>
+            <li class="horizontal-menu__submenu-list-item"><a class="horizontal-menu__submenu-link" href="#">О расторжении договора</a></li>
+            <li class="horizontal-menu__submenu-list-item"><a class="horizontal-menu__submenu-link" href="#">О разделе имущества</a></li>
+          </ul>
+        </li>
+        <li class="horizontal-menu__item">
+          <button class="button horizontal-menu__enter-button button_white" type="button">Войти
+          </button>
+        </li>
+        <li class="horizontal-menu__item">
+          <button class="button horizontal-menu__register-button" type="button">Зарегистрироваться
+          </button>
+        </li>
+      </ul>
+    </nav>
+    <div class="landing-page__background">
+      <div class="landing-page__motto">Лучшие номера для вашей работы, отдыха и просто вдохновения</div>
+      <div class="primary-search landing-page__primary-search">
+        <form>
+          <div class="h1 primary-search__heading">Найдём номера под ваши пожелания</div>
+          <div class="primary-search__in-out-labels">
+            <div class="h3 primary-search__in-label">Прибытие</div>
+            <div class="primary-search__stub"></div>
+            <div class="h3 primary-search__out-label">Выезд</div>
+          </div>
+          <!-- double-date-dropdown-->
+          <div class="double-date-dropdown primary-search__double-date-dropdown">
+            <div class="double-date-dropdown__from-field">
+              <!-- dropdown-->
+              <div class="dropdown date-dropdown">
+                <input class="dropdown__show date-dropdown__trigger" type="checkbox" id="autoid-1">
+                <label class="dropdown__backdrop" for="autoid-1"></label>
+                <label class="dropdown__label date-dropdown__label" for="autoid-1">ДД.ММ.ГГГГ</label>
+                <!-- dropdown content-->
+                <div class="dropdown__content date-dropdown__content">
+                  <div class="calendar">
+                    <input class="calendar__result" type="hidden" name="searchcdates[0]">
+                    <div class="calendar__pane datepicker-here"></div>
+                    <div class="calendar__button-box">
+                      <button class="button button_tiny calendar__clear-button calendar__button-label_gray" type="button">Очистить
+                      </button>
+                      <button class="button button_tiny calendar__apply-button" type="button">Применить
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <!-- /dropdown content-->
+              </div>
+              <!-- /dropdown-->
+            </div>
+            <div class="double-date-dropdown__strut"></div>
+            <div class="double-date-dropdown__to-field">
+              <!-- dropdown-->
+              <div class="dropdown date-dropdown">
+                <input class="dropdown__show date-dropdown__trigger" type="checkbox" id="autoid-2">
+                <label class="dropdown__backdrop" for="autoid-2"></label>
+                <label class="dropdown__label date-dropdown__label" for="autoid-2">ДД.ММ.ГГГГ</label>
+                <!-- dropdown content-->
+                <div class="dropdown__content date-dropdown__content">
+                  <div class="calendar">
+                    <input class="calendar__result" type="hidden" name="searchcdates[1]">
+                    <div class="calendar__pane datepicker-here"></div>
+                    <div class="calendar__button-box">
+                      <button class="button button_tiny calendar__clear-button calendar__button-label_gray" type="button">Очистить
+                      </button>
+                      <button class="button button_tiny calendar__apply-button" type="button">Применить
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <!-- /dropdown content-->
+              </div>
+              <!-- /dropdown-->
+            </div>
+          </div>
+          <!-- /double-date-dropdown-->
+          <div class="h3 primary-search__guest-label">Гости</div>
+          <!-- dropdown-->
+          <div class="dropdown guest-counter primary-search__guest-counter">
+            <input class="dropdown__show" type="checkbox" id="autoid-3">
+            <label class="dropdown__backdrop" for="autoid-3"></label>
+            <label class="dropdown__label guest-counter__label" for="autoid-3">Сколько гостей</label>
+            <!-- dropdown content-->
+            <div class="dropdown__content">
+              <!-- spin-->
+              <div class="spin guest-counter__spin">
+                <div class="spin__lable">Взрослые
+                </div>
+                <div class="spin__controls">
+                  <button class="spin__button spin__button_minus" type="button">&minus;</button>
+                  <input class="spin__counter" type="text" name="adults" value="0">
+                  <button class="spin__button spin__button_plus" type="button">+</button>
+                </div>
+              </div>
+              <!-- /spin-->
+              <!-- spin-->
+              <div class="spin guest-counter__spin">
+                <div class="spin__lable">Дети
+                </div>
+                <div class="spin__controls">
+                  <button class="spin__button spin__button_minus" type="button">&minus;</button>
+                  <input class="spin__counter" type="text" name="children" value="0">
+                  <button class="spin__button spin__button_plus" type="button">+</button>
+                </div>
+              </div>
+              <!-- /spin-->
+              <!-- spin-->
+              <div class="spin guest-counter__spin">
+                <div class="spin__lable">Младенцы
+                </div>
+                <div class="spin__controls">
+                  <button class="spin__button spin__button_minus" type="button">&minus;</button>
+                  <input class="spin__counter" type="text" name="babyes" value="0">
+                  <button class="spin__button spin__button_plus" type="button">+</button>
+                </div>
+              </div>
+              <!-- /spin-->
+              <div class="guest-counter__buttons-panel">
+                <button class="button button_tiny guest-counter__clear-button" type="button">Очистить
+                </button>
+                <div class="guest-counter__strut"></div>
+                <button class="button button_tiny guest-counter__apply-button" type="button">Применить
+                </button>
+              </div>
+            </div>
+            <!-- /dropdown content-->
+          </div>
+          <!-- /dropdown-->
+          <button class="button button_arrowed primary-search__button" type="submit">Подобрать номер
+          </button>
+        </form>
+      </div>
+    </div>
+    <footer class="big-footer">
+      <div class="big-footer__body">
+        <div class="big-footer__common-info"><a class="toxin-logo big-footer__logo" href="#"></a>
+          <div class="big-footer__common-info-text">Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»</div>
+        </div>
+        <div class="big-footer__links">
+          <h3 class="h3 big-footer__h3">Навигация</h3><a class="big-footer__link" href="#">О нас</a><a class="big-footer__link" href="#">Новости</a><a class="big-footer__link" href="#">Служба поддержки</a><a class="big-footer__link" href="#">Услуги</a>
+        </div>
+        <div class="big-footer__links">
+          <h3 class="h3 big-footer__h3">О нас</h3><a class="big-footer__link" href="#">О сервисе</a><a class="big-footer__link" href="#">Наша команда</a><a class="big-footer__link" href="#">Вакансии</a><a class="big-footer__link" href="#">Инвесторы       </a>
+        </div>
+        <div class="big-footer__links">
+          <h3 class="h3 big-footer__h3">Служба поддержки</h3><a class="big-footer__link" href="#">Соглашения</a><a class="big-footer__link" href="#">Сообщества</a><a class="big-footer__link" href="#">Связь с нами</a>
+        </div>
+        <div class="big-footer__subscribe">
+          <h3 class="h3 big-footer__h3">Подписка</h3>
+          <div class="big-footer__subscribe-text">Получайте специальные предложения и новости сервиса</div>
+          <!-- subscription-text-field-->
+          <div class="subscription-text-field big-footer__subscription-text-field">
+            <input class="text-field subscription-text-field__text" name="feedback" type="text" placeholder="Email">
+            <button class="subscription-text-field__button" type="button" onclick="alert('ok')"></button>
+          </div>
+          <!-- /subscription-text-field-->
+        </div>
+      </div>
+      <div class="big-footer__footer">
+        <div class="big-footer__footer-text">Copyright © 2018 Toxin отель. Все права защищены.</div>
+        <div class="big-footer__footer-socials"><a class="social-button social-button_twitter" href="#"></a><a class="social-button social-button_facebook" href="#"></a><a class="social-button social-button_instagram" href="#"></a></div>
+      </div>
+    </footer>
+  </body>
+</html>

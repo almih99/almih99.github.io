@@ -1,0 +1,55 @@
+
+.figure-wide {
+    margin: 0;
+    padding: 0;
+}
+
+figcaption {
+    text-align: center;
+    font-style: italic;
+}
+
+.orloy-in-wall {
+    position: relative;
+}
+
+.orloy-in-wall img {
+    width: 100%;
+}
+
+.orloy-in-wall object {
+    position: absolute;
+    width: 58%;
+    top: 14.8%;
+    left: 21%;
+    transform: scaleX(1.03);
+    filter: grayscale(0.8);
+}
+
+figure.left {
+    float: left;
+    margin-left: 0;
+    margin-right: 1em;
+}
+
+figure.right {
+    float: right;
+    margin-right: 0;
+    margin-left: 1em;
+}
+
+figure.center {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    text-align: center;
+}
+
+figure.center object {
+    width: 100%;
+
+}
+
+.zero-top-margin {
+    margin-top: 0;
+}
