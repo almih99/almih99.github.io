@@ -1757,19 +1757,22 @@
   }
 }
 .horizontal-menu__enter-button {
-  margin-right: -8px;
   height: 34px;
-  width: 88px;
+  padding-left: 20px;
+  padding-right: 20px;
+  transform: translateX(8px);
 }
 @media (max-width: 1100px) {
   .horizontal-menu__enter-button {
     margin: 0;
     margin-top: 20px;
     width: 100%;
+    transform: none;
   }
 }
 .horizontal-menu__register-button {
-  width: 197px;
+  padding-left: 17px;
+  padding-right: 17px;
   height: 34px;
 }
 @media (max-width: 1100px) {
