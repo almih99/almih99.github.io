@@ -1,0 +1,114 @@
+div.mainMenu {
+    display:none;
+	position:absolute; 
+	padding:10px;
+	background-color:RGBA(0,0,0,0.7);
+	border:solid 2px rgba(255,255,255,0.8);
+	border-radius:5px;
+	cursor:default;
+}
+
+div.mainMenuTitle {
+	background-color:rgba(255,255,255,0.7); 
+	padding:2px; 
+	text-align:center; 
+	font-weight:bold;
+	border:solid 2px rgba(255,255,255,0.5);
+	border-radius:5px;
+	margin-bottom:10px;
+}
+div.mainMenuTitle:hover {
+	background-color:RGBA(255,255,255,0.75);
+}
+
+table.mainMenuTitleTable {
+	padding:0;
+	border-width:0;
+	margin:0;
+	width:100%;
+}
+
+tr.mainMenuTitleTableRow {
+	padding:0;
+	border-width:0;
+	margin:0;
+}
+
+td.mainMenuTitleLeftCell {
+	text-align:left;
+	vertical-align:middle;
+	width:0px;
+	padding:0;
+	border-width:0;
+	margin:0;
+}
+
+td.mainMenuTitleCenterCell {
+	vertical-align:middle;
+	padding:0;
+	border-width:0;
+	margin:0;
+}
+
+td.mainMenuTitleRightCell {
+	text-align:right;
+	vertical-align:middle;
+	padding:0;
+	border-width:0;
+	margin:0;
+}
+
+.main-menu-history-svg {}
+
+.main-menu-history-svg:hover {
+	fill:green;
+}
+
+.main-menu-close-svg {}
+
+.main-menu-close-svg:hover {
+	fill:red;
+}
+
+div.mainMenuItem {
+	color:white; 
+	background-color:rgba(255,255,255,0.0);
+	border:solid 2px rgba(255,255,255,0.3);
+	border-radius:5px;
+	padding:5px 20px;
+	margin:3px 0px;
+	text-align:center;
+	cursor:default;
+}
+div.mainMenuItem:hover {
+	border-color: rgba(255,255,255,0.8);
+}
+
+div.mainMenuSubitemHolderOff {
+    background-color:red;
+	display: none;
+}
+
+div.mainMenuSubitemHolderOn{
+	display: block;
+}
+
+div.mainMenuSubitem {
+    background-color: rgba(0,0,0,0.2);
+	border:solid 2px rgba(255,255,255,0.3);
+	padding:5px 20px;
+	border-radius:5px;
+	cursor:pointer;
+	font-weight:normal;
+}
+div.mainMenuSubitem:hover {
+	border-color: rgba(255,255,255,0.8);
+	background-color: rgba(255,255,255,0.15);
+}
+
+table.mainMenuSubmenuTable {
+	width:100%;
+}
+td.mainMenuSubmenuTable {
+	width:50%;
+}

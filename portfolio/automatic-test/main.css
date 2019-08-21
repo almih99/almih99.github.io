@@ -1,0 +1,17 @@
+
+body {
+	background-image:url('img/bg.jpg');
+	background-attachment:fixed;
+	font-family: sans-serif;
+	-webkit-user-select:none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+}
+
+/* Кнопка закрытия используется во многих местах */
+.close-button-circle {
+
+}
+.close-button-circle:hover {
+	fill:#FEFC7D;
+}

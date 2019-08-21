@@ -1,0 +1,4 @@
+#!/bin/sh
+#../nw/node-webkit-v0.8.3-linux-ia32/nw --data-path="../nw/node-webkit-v0.8.3-linux-ia32/data" ./
+
+../nw/nwjs-v0.12.0-alpha3-linux-ia32/nw --data-path="../nw/node-webkit-v0.8.3-linux-ia32/data" ./

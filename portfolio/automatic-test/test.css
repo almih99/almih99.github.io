@@ -1,0 +1,289 @@
+/******************************************************************************************
+***
+*** Набор стилей, используемых для работы с тестом (режим тестирования)
+***
+*******************************************************************************************/
+
+/* Общая рамка для списка вопросов */
+div.test-content-frame {
+    display:none;
+	position:absolute; 
+	background-color:rgba(0,0,0,0.7);
+	border: solid 2px rgba(255,255,255,0.5);
+	border-radius:10px;
+}
+
+/* Рамка вокруг заголовка */
+div.test-content-title {
+	position:absolute;
+	background-color:rgba(255,255,255,0.8);
+	border: solid 4px rgba(255,255,255,0.5); 
+	border-radius:5px;
+	left:10px; 
+	top: 10px; 
+	right:10px; 
+	padding:0px;
+}
+
+/* Таблица в заголовке */
+table.test-content-title-table {
+	width:100%;
+}
+td.test-content-title-table-cell {
+	padding:0px 5px;
+}
+
+div.test-content-title-text {
+	background-color:black;
+	color:white;
+	padding:4px;
+	border-radius:5px;
+	text-align:center;
+	font-weight:bold;
+}
+
+div.empty {
+	color:rgba(0,0,0,0);
+}
+
+/* Собственно содержимое будет здесь */
+div.test-content-content {
+	position:absolute;
+	background-color:rgba(255,255,255,0.95);
+	border: solid 5px rgba(255,255,255,0.5);
+	border-radius:5px;
+	padding:10px; 
+	left:10px; 
+	right:10px;
+	bottom:10px; 
+	top:58px; /* настраивать из скрипта */
+	overflow-x:hidden; 
+	overflow-y:auto; 
+}
+
+/* Название набора тестов */
+h1.test-content-title {
+	font-size:130%; 
+	font-weight: bold; 
+	text-align: center;
+	padding-top:.5em; 
+	margin-bottom:.5em;
+}
+
+/* Название теста */
+h2.test-content-title {
+	font-size:110%; 
+	font-weight: bold; 
+	text-align: left; 
+	padding-top:1em; 
+	margin-bottom:.5em;
+}
+
+/* Таблица со сведениями о пользователе */
+table.test-content-userdata {}
+tr.test-content-userdata-row {}
+td.test-content-userdata-cell-1 {
+	vertical-align:top;
+	white-space:nowrap;
+}
+td.test-content-userdata-cell-2 {
+	vertical-align:top;
+}
+td.test-content-userdata-cell-3 {
+	vertical-align:top;
+}
+
+/* пояснительный текст раздела */
+p.TestDivisionText {
+	text-indent:2em; 
+	text-align:justify;
+	font-style:italic;
+	margin:0;
+}
+
+/* рамка вокруг вопроса в режиме обучения -- до ответа, при ошибке и при правильном ответе */
+div.TestQuestionFrame {
+	background-color:white;
+	border-width:3px; 
+	border-style:solid; 
+	border-color: rgba(0,0,0,0.3); 
+	border-radius:5px;
+	margin-top:1em; 
+	padding:.5em;
+}
+div.TestQuestionFrameWrong {
+	background-color:white;
+	border-width:3px; 
+	border-style:solid; 
+	border-color: rgba(255,0,0,0.5); 
+	border-radius:5px;
+	margin-top:1em; 
+	padding:.5em;
+}
+div.TestQuestionFrameOk {
+	background-color:white;
+	border-width:3px; 
+	border-style:solid; 
+	border-color: rgba(0,128,0,0.5); 
+	border-radius:5px;
+	margin-top:1em; 
+	padding:.5em;
+}
+
+/* стили таблицы, содержащей вопрос и варианты ответа */
+table.TestQuestionTable 
+{
+	border-collapse:collapse;
+}
+tr.TestQuestionTableQuestionRow {
+}
+td.TestQuestionTableQuestionCell {
+}
+tr.TestQuestionTableAnswerRow {
+}
+tr.TestQuestionTableAnswerRow:hover {
+	background-color:rgba(255,255,0,0.2);
+}
+td.TestQuestionTableSelectorCell {
+	vertical-align:top;
+	width:1%;
+}
+td.TestQuestionTableAnswerCell {
+	width:100%;
+}
+
+
+
+div.TestQuestionTextLine {
+	font-weight:bold;
+	text-align:justify;
+}
+span.TestQuestionNumber {color:red;}
+
+/* стили для текста варианта ответа */
+label.TestQuestionAnswerLabel {}
+
+label.TestQuestionAnswerLabelOk {color:rgb(0,100,0);}
+div.TestQuestionAnswerTextLine {}
+
+/* блок кнопок */
+div.TestQuestionCheckButtonsDiv {
+	display:none;
+	padding-top:0.5em;
+}
+
+/* Таблица, содержащая кнопки */
+table.TestQuestionCheckButtonTable {
+	padding:0;
+	border:0;
+	margin:0;
+}
+
+tr.TestQuestionCheckButtonTableRow {
+	padding:0;
+}
+
+tr.ListQuestionCheckButtonTableLCell {
+	padding:0;
+}
+
+tr.ListQuestionCheckButtonTableRCell {
+	padding:0;
+}
+
+/* кнопка "Проверить ответ" */
+div.TestQuestionCheckButton {
+	display:none;
+	border:solid 2px rgba(0,0,0,0.2);
+	border-radius:5px;
+	padding:3px;
+	position:relative;
+	width:15em;
+	text-align:center;
+	cursor:pointer;
+}
+div.TestQuestionCheckButton:hover {
+	background-color:rgba(255,255,255,1);
+	border-color:rgba(0,0,0,0.5);
+}
+
+/* кнопка "Показать теорию" */
+div.TestQuestionInfoButton {
+	display:none;
+	border:solid 2px rgba(0,0,0,0.2);
+	border-radius:5px;
+	padding:3px;
+	position:relative;
+	width:15em;
+	text-align:center;
+	cursor:pointer;
+}
+div.TestQuestionInfoButton:hover {
+	background-color:rgba(255,255,255,1);
+	border-color:rgba(0,0,0,0.5);
+}
+
+/* кнопка "Проверить" */
+div.test-button-box {
+	margin:10px 0px;
+}
+
+div.test-ready-button {
+	border:solid 2px rgba(0,0,0,0.2);
+	border-radius:5px;
+	padding:3px;
+	position:relative;
+	width:15em;
+	text-align:center;
+	cursor:pointer;
+}
+div.test-ready-button:hover {
+	background-color:rgba(255,255,255,1);
+	border-color:rgba(0,0,0,0.5);
+}
+
+/* результат */
+
+div.test-resault-block {
+	display:none;
+	background-color:white;
+	border:solid 3px rgba(0,0,0,0.5);
+	border-radius:5px;
+	margin-top:2em;
+	padding:1em;
+}
+
+h1.test-resault-header {
+	font-size:130%;
+	margin-top:0px;
+}
+
+table.test-resault-table {
+
+}
+
+tr.test-resault-table-row {
+
+}
+
+td.test-resault-table-cell {
+	padding-right:1em;
+}
+
+label.test-resault-checkbox {
+
+}
+
+div.test-resault-continue-button {
+	border:solid 2px rgba(0,0,0,0.2);
+	border-radius:5px;
+	padding:3px;
+	position:relative;
+	width:15em;
+	text-align:center;
+	cursor:pointer;
+}
+div.test-resault-continue-button:hover {
+	background-color:rgba(255,255,255,1);
+	border-color:rgba(0,0,0,0.5);
+}

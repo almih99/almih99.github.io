@@ -1,0 +1,77 @@
+/*
+ *  CSS для вывода на печать
+ */
+
+body {
+	background-image: none;
+}
+
+/* Общая рамка для анкетки */
+div.resault-content-frame {
+    display:block;
+    position:static;
+	background-color:white;
+	border:0px;
+	margin-left:5em;
+	border-radius:0px;
+	width:100%;
+}
+
+/* Рамка вокруг заголовка */
+div.resault-content-title {
+    display:none;
+}
+
+/* Собственно содержимое будет здесь */
+div.resault-content-content {
+	display:block;
+	position:static;
+	background-color:white;
+	border: 0px;
+	padding:10px; 
+	overflow-x:hidden; 
+	overflow-y:hidden; 
+}
+
+
+
+table.resault-protocol-table {
+	border: solid 2px black;
+	border-collapse: collapse;
+	width:100%;
+}
+
+th.resault-protocol-table {
+	border: solid 2px black;
+	padding-left: 1em;
+	padding-right: 1em;
+}
+
+tr.resault-protocol-table {}
+
+td.resault-protocol-table {
+	border: solid 2px black;
+	text-align: center;
+	padding-left: 1em;
+	padding-right: 1em;
+}
+
+td.resault-protocol-table-1 {}
+
+td.resault-protocol-table-2 {}
+
+td.resault-protocol-table-3 {}
+
+td.resault-protocol-table-4 {
+	text-align:left;
+}
+
+span.resault-protocol-undefined-field {
+	background-color:red;
+}
+
+/* блок кнопок */
+div.resault-content-button-box {
+    display: none;
+}
+

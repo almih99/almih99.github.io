@@ -1,0 +1,37 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>Теоретические сведения</title>
+<script type='text/javascript' src='testbase.js'></script>
+<!--
+Этот файл нужен для обхода странного косяка node-webkit, который
+заключается в том, что после записи в документ с помощью write
+заголовок окна имеет вид "node-webkit" и его не удается изменить.
+
+Отображаемое содержимое передаем с объектом окна page
+и выводим тем же способом в iframe, после чего меняем заголовок окна
+на соответствующий и приличный.
+-->
+<script type='text/javascript'>
+
+
+function L()
+{
+	var txt=testbase.explications[window.page].replace(/(<\s*head[^>]*>)/i, 
+	                 '$1 <base href="' + document.URL.replace(/[^\\\/]*$/,'') + '">');
+	var ifrm=document.getElementById('frm');
+	var doc = ifrm.contentDocument? ifrm.contentDocument: ifrm.contentWindow.document;
+	doc.open();
+	doc.write(txt);
+	doc.close();
+	var title = (/<title>(.*)<\/title>/i).exec(txt);
+	if(title) document.title=title[1];
+}
+
+</script>
+</head>
+<body onload="L();" style="margin:0;padding:0;overflow:hidden;border:0px;">
+	<iframe id='frm' style="width:100%;height:100%;">
+	</div>
+</body>
+</html>

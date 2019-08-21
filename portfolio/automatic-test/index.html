@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Название набора тестов</title>
+		<!--Загрузка таблиц каскадных стилей -->
+		<link rel="stylesheet" type="text/css" href="main.css">
+		<link rel="stylesheet" type="text/css" href="mainMenu.css">
+		<link rel="stylesheet" type="text/css" href="frame.css">
+		<link rel="stylesheet" type="text/css" href="questionList.css">
+		<link rel="stylesheet" type="text/css" href="questionListPrint.css" media="print">
+		<link rel="stylesheet" type="text/css" href="questionnaire.css">
+		<link rel="stylesheet" type="text/css" href="test.css">
+		<link rel="stylesheet" type="text/css" href="user.css">
+		<link rel="stylesheet" type="text/css" href="unimath.css">
+		<link rel="stylesheet" type="text/css" href="resaultProtocol.css">
+		<link rel="stylesheet" type="text/css" href="resaultProtocolPrint.css" media="print">
+		<link rel="stylesheet" type="text/css" href="history.css">
+		<link rel="stylesheet" type="text/css" href="historyPrint.css" media="print">
+		<!-- загрузка скриптов -->
+		<script type='text/javascript' src='testbase.js'></script>
+		<script type='text/javascript' src='prototype.js'></script>
+		<script type='text/javascript' src='utilites.js'></script>
+		<script type='text/javascript' src='randu.js'></script>
+		<script type='text/javascript' src='mainMenu.js'></script>
+		<script type='text/javascript' src='winfail.js'></script>
+		<script type='text/javascript' src='question.js'></script>
+		<script type='text/javascript' src='questionList.js'></script>
+		<script type='text/javascript' src='questionnaire.js'></script>
+		<script type='text/javascript' src='makeTestSet.js'></script>
+		<script type='text/javascript' src='checkAllAnswers.js'></script>
+		<script type='text/javascript' src='test.js'></script>
+		<script type='text/javascript' src='pageManager.js'></script>
+		<script type='text/javascript' src='initialize.js'></script>
+		<script type="text/javascript" src="ASCIIMathML.js"></script>
+		<script type="text/javascript" src="unimath.js"></script>
+		<script type="text/javascript" src="debug.js"></script>
+		<script type="text/javascript" src="resaultProtocol.js"></script>
+		<script type="text/javascript" src="history.js"></script>
+		<script type="text/javascript" src="winstate.js"></script>
+	</head>
+	<body onload='initialize()'>
+		<!-- Главное меню. Отдельно, чтобы каждый раз не пересоздавать -->
+		<div id='mainMenuWrapper'></div>
+		<!-- Содержимое. Всё равно каждый раз генерировать с нуля, потому на все случаи один -->
+		<div id='content'></div>
+		<!-- Отображение различных меню -->
+		<div id='contextMenu'></div>
+		<!-- Всякие сообщения и диалоговые окна -->
+		<div id='message'></div>
+		<!-- Плашка сообщающая о необходимости подождать -->
+		<div></div>
+		<!-- Отладчик -->
+		<script type="text/javascript">
+			// debug.map2html();
+		</script>
+	</body>
+</html>

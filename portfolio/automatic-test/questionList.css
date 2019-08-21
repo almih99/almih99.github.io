@@ -1,0 +1,252 @@
+/******************************************************************************************
+***
+*** Набор стилей, используемых для работы с полным списком вопросов (режим обучения)
+***
+*******************************************************************************************/
+
+/* Общая рамка для списка вопросов */
+div.content-frame {
+    display:none;
+	position:absolute; 
+	background-color:rgba(0,0,0,0.7);
+	border: solid 2px rgba(255,255,255,0.5);
+	border-radius:10px;
+}
+
+/* Рамка вокруг заголовка */
+div.content-title {
+	position:absolute;
+	background-color:rgba(255,255,255,0.8);
+	border: solid 4px rgba(255,255,255,0.5); 
+	border-radius:5px;
+	left:10px; 
+	top: 10px; 
+	right:10px; 
+	padding:0px;
+}
+
+/* Таблица в заголовке */
+table.content-title-table {
+	width:100%;
+}
+td.content-title-table-cell {
+	padding:0px 5px;
+}
+
+div.content-title-text {
+	background-color:black;
+	color:white;
+	padding:4px;
+	border-radius:5px;
+	text-align:center;
+	font-weight:bold;
+}
+
+/* Кнопка выбора раздела */
+input.content-title-button {
+	padding:4px;
+}
+
+/* Кнопка закрытия */
+div.close-button {
+	float:right; 
+	border: solid 2px white; 
+	padding:1px 3px;
+	border-radius:4px;
+	background-color:#FE7189;
+	cursor:pointer;
+}
+div.close-button:hover {
+	border-color:red;
+}
+
+/* Собственно содержимое будет здесь */
+div.content-content {
+	position:absolute;
+	background-color:rgba(255,255,255,0.95);
+	border: solid 5px rgba(255,255,255,0.5);
+	border-radius:5px;
+	padding:10px; 
+	left:10px; 
+	right:10px;
+	bottom:10px; 
+	top:58px; /* настраивать из скрипта */
+	overflow-x:hidden; 
+	overflow-y:auto; 
+}
+
+h1.QuestionListTopTitle {
+	font-size:130%; 
+	font-weight: bold; 
+	text-align: left; 
+	padding-top:.5em; 
+	margin-bottom:.5em;
+}
+
+/* заголовок раздела */
+h2.QuestionListDivisionTitle {
+	font-size:110%; 
+	font-weight: bold; 
+	text-align: center; 
+	padding-top:1em; 
+	margin-bottom:.5em;
+}
+
+/* пояснительный текст раздела */
+p.QuestionListText {
+	text-indent:2em; 
+	text-align:justify;
+	font-style:italic;
+	margin:0;
+}
+
+/* рамка вокруг вопроса в режиме обучения -- до ответа, при ошибке и при правильном ответе */
+div.ListQuestionFrame {
+	background-color:white;
+	border-width:3px; 
+	border-style:solid; 
+	border-color: rgba(0,0,0,0.3); 
+	border-radius:5px;
+	margin-top:1em; 
+	padding:.5em;
+}
+div.ListQuestionFrameWrong {
+	background-color:white;
+	border-width:3px; 
+	border-style:solid; 
+	border-color: rgba(255,0,0,0.5); 
+	border-radius:5px;
+	margin-top:1em; 
+	padding:.5em;
+}
+div.ListQuestionFrameOk {
+	background-color:white;
+	border-width:3px; 
+	border-style:solid; 
+	border-color: rgba(0,128,0,0.5); 
+	border-radius:5px;
+	margin-top:1em; 
+	padding:.5em;
+}
+
+/* стили таблицы, содержащей вопрос и варианты ответа */
+table.ListQuestionTable 
+{
+	border-collapse:collapse;
+}
+tr.ListQuestionTableQuestionRow {
+}
+td.ListQuestionTableQuestionCell {
+}
+tr.ListQuestionTableAnswerRow {
+}
+tr.ListQuestionTableAnswerRow:hover {
+	background-color:rgba(255,255,0,0.2);
+}
+td.ListQuestionTableSelectorCell {
+	vertical-align:top;
+	width:1%;
+}
+td.ListQuestionTableAnswerCell {
+	width:100%;
+}
+
+
+
+div.ListQuestionTextLine {
+	font-weight:bold;
+	text-align:justify;
+}
+span.ListQuestionNumber {color:red;}
+
+/* стили для текста варианта ответа */
+label.ListQuestionAnswerLabel {
+	width:100%;
+}
+
+label.ListQuestionAnswerLabelOk {color:rgb(0,100,0);}
+div.ListQuestionAnswerTextLine {}
+
+/* блок кнопок */
+div.ListQuestionCheckButtonsDiv {
+    display: none;
+	padding-top:0.5em;
+}
+
+/* Таблица, содержащая кнопки */
+table.ListQuestionCheckButtonTable {
+	padding:0;
+	border:0;
+	margin:0;
+}
+
+tr.ListQuestionCheckButtonTableRow {
+	padding:0;
+}
+
+tr.ListQuestionCheckButtonTableLCell {
+	padding:0;
+}
+
+tr.ListQuestionCheckButtonTableRCell {
+	padding:0;
+}
+
+/* кнопка "Проверить ответ" */
+div.ListQuestionCheckButton {
+    display: none;
+	border:solid 2px rgba(0,0,0,0.2);
+	border-radius:5px;
+	padding:3px;
+	position:relative;
+	width:15em;
+	text-align:center;
+	cursor:pointer;
+}
+div.ListQuestionCheckButton:hover {
+	background-color:rgba(255,255,255,1);
+	border-color:rgba(0,0,0,0.5);
+}
+
+/* кнопка "Показать теорию" */
+div.ListQuestionInfoButton {
+    display: none;
+	border:solid 2px rgba(0,0,0,0.2);
+	border-radius:5px;
+	padding:3px;
+	position:relative;
+	width:15em;
+	text-align:center;
+	cursor:pointer;
+}
+div.ListQuestionInfoButton:hover {
+	background-color:rgba(255,255,255,1);
+	border-color:rgba(0,0,0,0.5);
+}
+
+div.navigationMenuBackground {
+	display: none;
+	position: absolute;
+	background-color: rgba(0,0,0,0.5);
+}
+
+div.navigationMenuFrame {
+	position:absolute;
+	border:solid 3px rgba(255,255,255,0.5);
+	background-color:rgba(0,0,0,0.8);
+	padding:10px;
+	border-radius:8px;
+	color:white;
+}
+
+div.navigationMenuItem {
+	padding:3px;
+	border-radius:3px;
+	cursor:pointer;
+	border:solid 2px rgba(0,0,0,0);
+}
+div.navigationMenuItem:hover {
+/*	background-color:rgba(255,255,255,0.2);*/
+	background-color:rgba(0,0,0,1);
+	border-color: rgba(255,255,255,0.5);
+}

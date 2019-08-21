@@ -1,0 +1,155 @@
+
+/* Общая рамка для анкетки */
+div.resault-content-frame {
+    display:block;
+	position:absolute; 
+	background-color:rgba(0,0,0,0.7);
+	border: solid 2px rgba(255,255,255,0.5);
+	border-radius:10px;
+}
+
+/* Рамка вокруг заголовка */
+div.resault-content-title {
+	position:absolute;
+	background-color:rgba(255,255,255,0.8);
+	border: solid 4px rgba(255,255,255,0.5); 
+	border-radius:5px;
+	left:10px; 
+	top: 10px; 
+	right:10px; 
+	padding:0px;
+}
+
+/* Таблица в заголовке */
+table.resault-content-title-table {
+	width:100%;
+}
+td.resault-content-title-table-cell {
+	padding:0px 5px;
+}
+
+div.resault-content-title-text {
+	background-color:black;
+	color:white;
+	padding:4px;
+	border-radius:5px;
+	text-align:center;
+	font-weight:bold;
+	/* white-space:nowrap; */
+}
+
+.resault-printer-icon {
+	fill:black;
+}
+.resault-printer-icon:hover {
+	fill:green;
+}
+
+/* Собственно содержимое будет здесь */
+div.resault-content-content {
+	position:absolute;
+	background-color:rgba(255,255,255,0.95);
+	border: solid 5px rgba(255,255,255,0.5);
+	border-radius:5px;
+	padding:10px; 
+	left:10px; 
+	right:10px;
+	bottom:10px; 
+	top:58px; /* настраивать из скрипта */
+	overflow-x:hidden; 
+	overflow-y:auto; 
+}
+
+table.resault-protocol-table {
+	border: solid 2px black;
+	border-collapse: collapse;
+	width:100%;
+}
+
+th.resault-protocol-table {
+	border: solid 2px black;
+	padding-left: 1em;
+	padding-right: 1em;
+}
+
+tr.resault-protocol-table {}
+
+td.resault-protocol-table {
+	border: solid 2px black;
+	text-align: center;
+	padding-left: 1em;
+	padding-right: 1em;
+}
+
+td.resault-protocol-table-1 {}
+
+td.resault-protocol-table-2 {}
+
+td.resault-protocol-table-3 {}
+
+td.resault-protocol-table-4 {
+	text-align:left;
+}
+
+span.resault-protocol-undefined-field {
+	background-color:red;
+}
+
+/* блок кнопок */
+div.resault-content-button-box {
+    display: block;
+    margin-top: 2em;
+	padding-top: 0.5em;
+	border-top: solid 2px gray;
+}
+
+/* Таблица, содержащая кнопки */
+table.resault-content-button-table {
+	padding:0;
+	border:0;
+	margin:0;
+}
+
+tr.resault-content-button-table-row {
+	padding:0;
+}
+
+tr.resault-content-button-table-l-cell {
+	padding:0;
+}
+
+tr.resault-content-button-table-r-cell {
+	padding:0;
+}
+
+/* кнопка "Вернуться в меню" */
+div.resault-content-l-button {
+    display: block;
+	border:solid 2px rgba(0,0,0,0.2);
+	border-radius:5px;
+	padding:3px;
+	position:relative;
+	width:15em;
+	text-align:center;
+	cursor:pointer;
+}
+div.resault-content-l-button:hover {
+	background-color:rgba(255,255,255,1);
+	border-color:rgba(0,0,0,0.5);
+}
+
+/* кнопка "Печатать" */
+div.resault-content-r-button {
+    display: block;
+	border:solid 2px rgba(0,0,0,0.2);
+	border-radius:5px;
+	padding:3px;
+	position:relative;
+	width:15em;
+	text-align:center;
+	cursor:pointer;
+}
+div.resault-content-r-button:hover {
+	background-color:rgba(255,255,255,1);
+	border-color:rgba(0,0,0,0.5);
+}

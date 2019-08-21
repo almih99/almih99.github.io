@@ -1,0 +1,36 @@
+/*
+ *  CSS для вывода на печать
+ */
+
+body {
+	background-image: none;
+}
+
+/* Общая рамка для анкетки */
+div.content-frame {
+    display:block;
+    position:static;
+	background-color:white;
+	border:0px;
+	margin-left:5em;
+	border-radius:0px;
+	width:100%;
+}
+
+/* Рамка вокруг заголовка */
+div.content-title {
+    display:none;
+}
+
+/* Собственно содержимое будет здесь */
+div.content-content {
+	display:block;
+	position:static;
+	background-color:white;
+	border: 0px;
+	padding:10px; 
+	overflow-x:hidden; 
+	overflow-y:hidden; 
+}
+
+table.ListQuestionCheckButtonTable { display:none; }

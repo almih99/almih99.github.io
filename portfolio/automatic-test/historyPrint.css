@@ -1,0 +1,47 @@
+/*
+ *  CSS для вывода на печать
+ */
+
+body {
+	background-image: none;
+}
+
+/* Общая рамка для анкетки */
+div.history-content-frame {
+    display:block;
+    position:static;
+	background-color:white;
+	border:0px;
+	margin-left:5em;
+	border-radius:0px;
+	width:100%;
+}
+
+/* Рамка вокруг заголовка */
+div.history-content-title {
+    display:none;
+}
+
+/* Собственно содержимое будет здесь */
+div.history-content-content {
+	display:block;
+	position:static;
+	background-color:white;
+	border: 0px;
+	padding:10px; 
+	overflow-x:hidden; 
+	overflow-y:hidden; 
+}
+
+tr.history-date-row {
+	display:none;
+}
+
+td.history-record-cell {
+	border-top:solid 1px black;
+}
+
+/* блок кнопок */
+div.history-content-button-box {
+    display: none;
+}

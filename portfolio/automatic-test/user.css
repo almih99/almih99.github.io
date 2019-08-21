@@ -1,0 +1,34 @@
+/*
+стили пользователя
+*/
+
+span.quote {
+	font-style:italic;
+	color:#4D4D4D;
+}
+
+div.image {
+	text-align:center;
+	border:solid 2px lightgray;
+	border-radius:5px;
+	padding:5px;
+	margin:5px;
+}
+div.image:hover {
+	border-color:gray;
+}
+
+div.imagetitle {
+	font-style:italic;
+	font-weight:normal;
+}
+
+span.variable {
+	font-family:'Times New Roman', Times, serif;
+	font-style:italic;
+	color:maroon;
+}
+
+.nowrap {
+	white-space:nowrap;
+}

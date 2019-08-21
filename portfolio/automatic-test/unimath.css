@@ -1,0 +1,132 @@
+/*
+
+UniMath: support of MathML on most of browsers.
+
+Author: Ivan Vanyushkin.
+http://vanav.iatp.org.ua/go/unimath
+
+Version 0.0.2.
+
+*/
+
+/* Any table in math */
+.math_table {
+  color: maroon;
+  border-color: green;
+
+  text-align: center; /* Any problems with this? Mainly for frac in IE. */
+  margin: 0 auto; /* Mainly for frac in Moz. */
+
+  font-family: /*'Arial Unicode MS',*/ 'Times New Roman', Times, serif;
+  font-size: 100%; /* Default, let size inherit. */
+}
+
+/* Size of math relative to main font (main math table) */
+.math {
+  font-size: 100%;
+}
+
+.math_table td {
+  /* Fix for IE italics' width bug. IE 5.0 isn't fixed ('hidden' for it)? */
+  overflow: visible;
+}
+
+
+/* Styles, set by script: mi, mn, mo */
+
+.mfrac {
+  margin: 0 .1em;
+}
+.mfrac_top {
+  text-align: center;
+  margin: 0 auto;
+  border-bottom: 1px solid;
+}
+.mfrac_bottom {
+  text-align: center;
+  margin: 0 auto;
+}
+.mfrac_bottom_mid {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.munderover_over {
+  font-size: 80%;
+}
+.munderover_middle {
+  font-size: 120%;
+  line-height: 1em;
+}
+.munderover_under {
+  font-size: 80%;
+}
+
+.msup_right {
+  vertical-align: top;
+}
+.msub_right {
+  vertical-align: bottom;
+}
+
+.msubsup_main {
+  font-size: 100%; /* check &int; and usual letter here */
+}
+.msubsup_sup {
+  vertical-align: top;
+}
+.msubsup_sub {
+  vertical-align: bottom;
+}
+
+.mroot {
+  margin-top: 2px;
+}
+.mroot_char {
+  /* font-size and line-height by script */
+  vertical-align: top;
+}
+.mroot_body {
+  border-top: 1px solid; /* TODO: Width should be set by script. */
+}
+.mroot_ind {
+  /* scriptlevel="+2", .71 times .71 */
+  font-size: 50%;
+}
+
+.munder_middle {
+  font-size: 120%;
+  line-height: 1em;
+}
+.munder_under {
+  font-size: 80%;
+  line-height: .9em;
+}
+
+.mover_middle {
+  font-size: 120%;
+  line-height: 1em;
+}
+.mover_over {
+  vertical-align: bottom;
+  font-size: 80%;
+}
+
+.msub_right,
+.msup_right,
+.msubsup_sup,.msubsup_sub,
+.munder_under,
+.mover_over,
+.munderover_over,.munderover_under
+/*mmultiscripts>*,
+math[display="inline"] mfrac>* */
+{
+  /* scriptlevel="+1" */
+  font-size: 71%;
+}
+
+/*
+.mroot_body {
+  font-size: 50%;
+}
+*/
