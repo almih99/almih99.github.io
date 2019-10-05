@@ -1,0 +1,24 @@
+.life {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 140px;
+    height: 180px;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    font-family: sans-serif;
+    border: solid 3px gray;
+    border-radius: 10px;
+    background: lightyellow;
+}
+.now {
+    font-size: 180%;
+    color: darkorange;
+}
+#day li {
+    transition: 0.3s;
+}
+
+
+
+
